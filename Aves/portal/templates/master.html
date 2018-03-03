@@ -76,10 +76,18 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mas<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#contactos"><span class="icon-address-book"></span>CONTACTO</a></li>
-							<li><a href="#redes"><span class="icon-link"></span>REDES Sociales</a></li>
-							<li><a href="{% url 'autores' %}"><span class="icon-key"></span>AUTORES</a></li>
-							<li class="active"><a href="{% url 'fotos' %}"><span class="icon-images"></span>GALERIA</a></li>
+							<li>
+								<a href="{% url 'autores' %}"><span class="icon-users"></span>AUTORES</a>
+							</li>
+							<li class="active">
+								<a href="{% url 'fotos' %}"><span class="icon-images"></span>GALERIA</a>
+							</li>
+							<li>
+								<a href="#contactos"><span class="icon-address-book"></span>CONTACTO</a>
+							</li>
+							<li>
+								<a href="#redes"><span class="icon-link"></span>REDES Sociales</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -182,6 +190,7 @@
 						<div class="widget-body">
 							<p class="simplenav">
 								<a href="{% url 'home' %}"><span class="icon-home2"></span>INICIO</a> |
+								<a href="{% url 'autores' %}"><span class="icon-users"></span>AUTORES</a> |
 								<a href="{% url 'fotos' %}">GALERIA</a>
 							</p>
 						</div>

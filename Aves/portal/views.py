@@ -266,7 +266,19 @@ def index(request):
 
 
 def fotos(request):
-    urlfotos = Fotos.objects.distinct('url').all()[:12]
+    datosfotos = []
+    listaespeciesfotos = EspeciesFotos.objects.distinct().all()[:6]
+    for ver in listaespeciesfotos:
+        iespecie = ver.especie_id_especies.id_especies
+        ifoto = ver.fotos_id_fotos.id_fotos
+        cantEspFoto = EspeciesFotos.objects.filter(especie_id_especies=iespecie).count()
+        # Cantidad de Especies con fotos
+        especie = Especies.objects.filter(id_especies=iespecie).all()[0]
+        foto = Fotos.objects.filter(id_fotos=ifoto).all()[0]
+        datosfotos.append((foto, especie, cantEspFoto))
+
+    #-------------- FOTOS en galeria ----------------------#
+    urlfotos = Fotos.objects.distinct().all()[:12]
     # cont = 1
     detalle = []
     for foto in urlfotos:
@@ -279,6 +291,7 @@ def fotos(request):
         # print cont
         # cont += 1
         detalle.append((foto, especie, ave))
+    #-------------- PAGINACION de galeria ----------------------#
     # Muestra 12 fotos por pagina (multiplos de 3 por el responsive)
     paginator = Paginator(urlfotos, 6)
     page = request.GET.get('page')
@@ -294,6 +307,7 @@ def fotos(request):
     cntxtFoto = {
         'paginas': imagenes,
         'listafotos': detalle,
+        'datosfotos': datosfotos,
     }
     return render(request, "galeria.html", cntxtFoto)
 
