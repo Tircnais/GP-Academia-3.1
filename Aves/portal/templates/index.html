@@ -1,18 +1,33 @@
 {% extends "master.html" %}
 
+{% load static %}
+
 {% block titulo %}
 	Inicio
 {% endblock %}
 
+{% block style %}
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+{% endblock %}
 
 {% block contenido %}
+	<!-- Intro -->
+	<div class="container text-center">
+		<br> <br>
+		<h2 class="thin">Información</h2>
+		<p class="text-muted">
+			Representación gráfica de los datos recabados.<br> 
+			Si necesita información detallada visite los enlaces en proporcionados.
+		</p>
+	</div>
+	<!-- /Intro-->
 	<div class="col-xs-12 verde">
 		<div class="row">
 			<div class="col-xs-3">
 				<h3>Reporte de Aves</h3>
 				<p><b>Ecuadorian & Peruvian birds</b>, es el sitio donde puede acceder a una búsqueda avanzada y exhaustiva sobre las diferentes aves que se encuentran tanto en Ecuador como en Perú. A continuación se muestra el número de total de Aves e información más relevante.</p>
 			</div>
-			<div class="col-xs-122">
+			<div class="col-xs-9">
 				<div class="table-responsive">
 					<table class="table">
 						<thead>
@@ -37,122 +52,93 @@
 	<div class="col-xs-12 blanco textnegro">
 		<div class="row">
 			<div class="col-xs-12">
-				<h3>Lista de Autores</h3>
+				<h3 class="text-center">Lista de Autores</h3>
 				<p>A continuación se presenta una lista de los principales autores que han realizado una evaluación ecológica de las aves, cuyo objetivo es mostrar la composición y diversidad de la avifauna.</p>
 			</div>
 			<div class="col-xs-12">
 				<section class="datatablas">
 					<table id="example" class="display" width="100%">
-						<thead>
-			                <tr class="success">
+				        <thead>
+				            <tr class="success">
 			                    <th>Nombre</th>
 			                    <th>Bibliografía</th>
-			                    <th>Año publicación</th>
-			                    <th>Año recoleccion</th>
-			                    <th>Fecha</th>
+			                    <th>Observaciones</th>
 			                </tr>
-			            </thead>
-			            <tfoot>
-			            	<tr class="info">
+				        </thead>
+				        <tfoot>
+				        	<tr class="info">
 			                    <th>Nombre</th>
 			                    <th>Bibliografía</th>
-			                    <th>Año publicación</th>
-			                    <th>Año recoleccion</th>
-			                    <th>Fecha</th>
+			                    <th>Observaciones</th>
 			                </tr>
 			            </tfoot>
-			            <tbody class="searchable">
-			            	{% for quien in listautores %}
+				        <tbody class="searchable">
+				            {% for quien in listautores %}
 			                    <tr>
-			                        <td>{{ quien.autor }}</td>
+			                        <td>{{ quien.nombre }}</td>
 			                        <td>{{ quien.bibliografia|slice:"0:40" }}</td>
-			                        <td>{{ quien.a_opublicacion }}</td>
-			                        <td>{{ quien.a_orecoleccion }}</td>
-			                        <td>{{ quien.fecha }}</td>
+			                        <td>{{ quien.observaciones|default_if_none:"No Disponible" }}</td>
 			                    </tr>
 			                {% endfor %}
-			            </tbody>
+				        </tbody>
 				    </table>
 				</section>
 			</div>
 		</div>
 	</div>
-	<div class="col-xs-12">
-		<div class="row textblanco">
-			<div class="col-xs-12">
-				<div class="row">
-					<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-				</div>
-			</div>
+	<div class="col-xs-12 textblanco">		
+		<div class="row">
+			<div id="palabras"></div>
 		</div>
 	</div>
 {% endblock %}
 
 {% block script %}
+	<script type="text/Javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script type="text/Javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
-	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+
 
 	<script type="text/javascript">
 	    jQuery(document).ready(function ($) {
 	    	$(document).ready(function() {
 				$('#example').DataTable();
 			});
-	    	window.onload = function () {
-				var chart = new CanvasJS.Chart("chartContainer", {
-					theme: "light1", // "light2", "dark1", "dark2"
-					animationEnabled: false, // change to true		
-					title:{
-						text: "Autores con mayores estudios"
-					},
-					data: [
-						{
-							// Change type to "bar", "area", "spline", "pie",etc.
-							type: "column",
-							dataPoints: [
-								{% for quien in mejoresautores %}
-									{ label: "{{ quien.0 }}",  y: {{ quien.1 }}},
-								{% endfor %}
-							]
-						}
-					]
-				});
-				chart.render();
-			}
-	        $('#selecorden').click(function(){
-	        	console.log('llegando');
-	            $idorden = $('#selecorden').val();
-	            console.log($idorden);
-	            $.ajax({
-	                method:"post",
-	                url: '{% url "ajax_familia" %}',
-	                data: {
-	                    'idorden': $idorden,
-	                },
-	                //beforeSend:function() {},
-	                //data es la respuesta en formtato (diccionario)
-	                success:function(data){
-	                    console.log('regresando del método');
-	                    console.log(data.mensaje);
-	                    var obj = jQuery.parseJSON(data.filtrofamilias);
-	                    var etiqueta= "<label>Seleccione el orden: </label>";
-	                    var seleccion ="<select name='tiposorden' id='selecfamilia'>";
-	                    var fseleccion ="</select>";
-	                    var opciones="";
-						opciones="<option>--------------</option>"
-	                    for(i=0; i<obj.length; i++){
-	                        console.log(obj[i]);
-	                        opciones += "<option value='obj[i].idfamilia'>obj[i].nombfamilia</option>";
-	                        console.log("f-o-r----------------");
-	                    }
-	                    var familias="";
-	                    familias = etiqueta+seleccion+opciones+fseleccion;
-	                    console.log(familias);
-	                    $('#datos_familia').html(familias);
-	                }
-	            });
-	        });
+
+			var text = '';
+			{% for quien in mejoresautores %}
+				text += '{{ quien.0.nombre }}'+";";
+			{% endfor %}
+			var lines = text.split(";"),
+			    data = Highcharts.reduce(lines, function (arr, word) {
+			        var obj = Highcharts.find(arr, function (obj) {
+			            return obj.name === word;
+			        });
+			        if (obj) {
+			            obj.weight += 1;
+			        } else {
+			            obj = {
+			                name: word,
+			                weight: 1
+			            };
+			            arr.push(obj);
+			        }
+			        return arr;
+			    }, []);
+
+			Highcharts.chart('palabras', {
+			    series: [{
+			        type: 'wordcloud',
+			        data: data,
+			        name: 'Occurrences'
+			    }],
+			    title: {
+			        text: 'Autores encontrados'
+			    }
+			});
+
 	    });
 	</script> 
 {% endblock %}

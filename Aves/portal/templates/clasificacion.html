@@ -1,13 +1,34 @@
 {% extends "master.html" %}
 
+{% load static %}
+
 {% block titulo %}
 	Clasificación
+{% endblock %}
+{% block style %}
+	
 {% endblock %}
 
 {% block contenido %}
 	<div class="col-xs-12">
-		<div id="gbarras" style="min-width: 310px; height: 400px; margin: 0 auto">
-			
+		<div class="row">
+			<div class="col-xs-6">
+				<div id="gbarras" style="min-width: 310px; height: 400px; margin: 0 auto">
+					
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="row">
+					<div class="col-xs-12">
+						<div id="cambio"></div>
+					</div>
+					<div class="col-xs-12">
+						<button class="btn btn-default col-xs-4" id="plain">Vertical</button>
+						<button class="btn btn-info col-xs-4" id="inverted">Horizontal</button>
+						<button class="btn btn-warning col-xs-4" id="polar">Polar</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="col-xs-12">
@@ -21,18 +42,24 @@
 	<script src="https://code.highcharts.com/modules/sankey.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
 	<script type="text/javascript">
 	    jQuery(document).ready(function ($) {
 	        console.log('llegando');
-
+	        function numeroAleatorio(min, max) {
+	        	return Math.round(Math.random() * (max - min) + min);
+			}
 	        Highcharts.chart('gbarras', {
 			    title: {
 			        text: 'Aves por Especie'
 			    },
 			    xAxis: {
 			        categories: [
-		        		{% for p in categoria %}
-							'{{p.0}}',
+		        		{% for p in datosclasifica %}
+							'{{ p.0.nombre }}',
 						{% endfor %}
 					]
 			    },
@@ -50,29 +77,32 @@
 			    	{% for p in datosclasifica %}
 			    	{
 			        	type: 'column',
-			        	name: '{{p.0}}',
-			        	data: [{{p.1}},]
-			    },{% endfor %}
+			        	name: '{{ p.0.nombre }}',
+			        	data: [{{ p.1 }},]
+			    	},
+			    	{% endfor %}
 			    	{% for p in datospromedio %}
 			    	{
-			        type: 'spline',
-			        name: 'Promedios',
-			        data: [{{p.0}},],
-			        marker: {
-			            lineWidth: 2,
-			            lineColor: Highcharts.getOptions().colors[3],
-			            fillColor: 'white'
-			        }
-			    },{% endfor %}{
+				        type: 'spline',
+				        name: 'Promedios',
+				        data: [{{ p.1 }},],
+				        marker: {
+				            lineWidth: 2,
+				            lineColor: Highcharts.getOptions().colors[3],
+				            fillColor: 'white'
+				        }
+			    	},
+			    	{% endfor %}{
 			        type: 'pie',
 			        name: 'Total especies',
 			        data: [
-			        {% for p in datosclasifica %}
-			        {
-			            name: '{{p.0}}',
-			            y: {{p.1}},
-			            color: Highcharts.getOptions().colors[0] // Jane's color
-			        }, {% endfor %}
+				        {% for p in datosclasifica %}
+					        {
+					            name: '{{ p.0.nombre }}',
+					            y: {{ p.1 }},
+					            color: Highcharts.getOptions().colors[numeroAleatorio(1, 100)] // Jane's color
+					        },
+			        	{% endfor %}
 			        ],
 			        center: [100, 80],
 			        size: 100,
@@ -84,6 +114,75 @@
 			});
 
 
+			var chart = Highcharts.chart('cambio', {
+
+			    title: {
+			        text: 'Cantidad de Aves por especie'
+			    },
+
+			    subtitle: {
+			        text: 'Vertical'
+			    },
+
+			    xAxis: {
+			        categories: [
+			        	{% for e in listaespecie %}
+			        		'{{ e.0.nombre }}',
+			        	{% endfor %}
+			        ]
+			    },
+
+			    series: [{
+			        type: 'column',
+			        colorByPoint: true,
+			        data: [
+			        	{% for e in listaespecie %}
+			        		{{ e.1 }},
+			        	{% endfor %}
+			        ],
+			        showInLegend: false
+			    }]
+
+			});
+
+
+			$('#plain').click(function () {
+			    chart.update({
+			        chart: {
+			            inverted: false,
+			            polar: false
+			        },
+			        subtitle: {
+			            text: 'Vertical'
+			        }
+			    });
+			});
+
+			$('#inverted').click(function () {
+			    chart.update({
+			        chart: {
+			            inverted: true,
+			            polar: false
+			        },
+			        subtitle: {
+			            text: 'Horizontal'
+			        }
+			    });
+			});
+
+			$('#polar').click(function () {
+			    chart.update({
+			        chart: {
+			            inverted: false,
+			            polar: true
+			        },
+			        subtitle: {
+			            text: 'Polar'
+			        }
+			    });
+			});
+
+
 			Highcharts.chart('graficalineas', {
 			    title: {
 			        text: 'Detalle de Aves segun su clasificacion.'
@@ -92,7 +191,6 @@
 			        keys: ['from', 'to', 'weight'],
 			        data: [
 			        	// desde aki
-			        	
 			            ['England', 'Morocco', 2 ],
 			            ['England', 'South Africa', 7 ],
 			            ['South Africa', 'China', 5 ],

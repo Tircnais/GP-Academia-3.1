@@ -1,77 +1,96 @@
 {% extends "master.html" %}
 
+{% load static %}
+
 {% block titulo %}
 	Detalle por provincias
 {% endblock %}
 
+{% block style %}
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+{% endblock %}
+
 {% block contenido %}
 	<div class="col-xs-12">
-		<h3 class="col-xs-12 borde">Ecuador</h3>
-		<section class="blanco datatablas">
-			<table id="example" class="display" width="100%">
-				<thead>
-	                <tr class="success">
-	                    <th>Codigo de Provincia</th>
-	                    <th>Provincia</th>
-	                    <th>Total de Aves</th>
-	                </tr>
-	            </thead>
-	            <tfoot>
-	            	<tr class="info">
-	                    <th>Codigo de Provincia</th>
-	                    <th>Provincia</th>
-	                    <th>Total de Aves</th>
-	                </tr>
-	            </tfoot>
-	            <tbody class="searchable">
-	            	{% for p in contEc %}
-						<tr>
-							<td>{{p.0}}</td>
-							<td>{{p.1}}</td>
-							<td>{{p.2}}</td>
-						</tr>
-					{% endfor %}
-	            </tbody>
-		    </table>
-		</section>
-	</div>
-	<div class="col-xs-12">
-		<h3 class="col-xs-12 borde">Perú</h3>
-		<section class="blanco datatablas">
-			<table id="example2" class="display" width="100%">
-				<thead>
-	                <tr class="success">
-	                    <th>Codigo de Provincia</th>
-	                    <th>Provincia</th>
-	                    <th>Total de Aves</th>
-	                </tr>
-	            </thead>
-	            <tfoot>
-	            	<tr class="info">
-	                    <th>Codigo de Provincia</th>
-	                    <th>Provincia</th>
-	                    <th>Total de Aves</th>
-	                </tr>
-	            </tfoot>
-	            <tbody class="searchable">
-	            	{% for p in contPe %}
-						<tr>
-							<td>{{p.0}}</td>
-							<td>{{p.1}}</td>
-							<td>{{p.2}}</td>
-						</tr>
-					{% endfor %}
-	            </tbody>
-		    </table>
-		</section>
+		<div class="row">
+			<div class="col-xs-4">
+				<div id="cuadropaises">
+					<p>Algo va mal... revisar la conexión de internet.</p>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div id="container">
+					<p>Cargando...</p>
+		        </div>
+			</div>
+			<div class="col-xs-4">
+		        <div id="aves">
+		        	<p>Espere un momento...</p>
+		        </div>
+			</div>
+		</div>
 	</div>
 	<div class="col-xs-12">
 		<div class="row">
 			<div class="col-xs-6">
-				<div id="compara"></div>
+				<h3 class="col-xs-12 borde text-center">Ecuador</h3>
+				<section class="negro datatablas">
+					<table id="example" class="display" width="100%">
+						<thead>
+			                <tr class="success">
+			                    <th>Codigo de Provincia</th>
+			                    <th>Provincia</th>
+			                    <th>Total de Aves</th>
+			                </tr>
+			            </thead>
+			            <tfoot>
+			            	<tr class="info">
+			                    <th>Codigo de Provincia</th>
+			                    <th>Provincia</th>
+			                    <th>Total de Aves</th>
+			                </tr>
+			            </tfoot>
+			            <tbody class="searchable">
+			            	{% for p in contEc %}
+								<tr>
+									<td>{{p.0}}</td>
+									<td>{{p.1}}</td>
+									<td>{{p.2}}</td>
+								</tr>
+							{% endfor %}
+			            </tbody>
+				    </table>
+				</section>
 			</div>
 			<div class="col-xs-6">
-				<div id="cuadropaises"></div>
+				<h3 class="col-xs-12 borde text-center">Perú</h3>
+				<section class="datatablas">
+					<table id="example2" class="display" width="100%">
+						<thead>
+			                <tr class="success">
+			                    <th>Codigo de Provincia</th>
+			                    <th>Provincia</th>
+			                    <th>Total de Aves</th>
+			                </tr>
+			            </thead>
+			            <tfoot>
+			            	<tr class="info">
+			                    <th>Codigo de Provincia</th>
+			                    <th>Provincia</th>
+			                    <th>Total de Aves</th>
+			                </tr>
+			            </tfoot>
+			            <tbody class="searchable">
+			            	{% for p in contPe %}
+								<tr>
+									<td>{{p.0}}</td>
+									<td>{{p.1}}</td>
+									<td>{{p.2}}</td>
+								</tr>
+							{% endfor %}
+			            </tbody>
+				    </table>
+				</section>
 			</div>
 		</div>
 	</div>
@@ -79,14 +98,14 @@
 
 {% block script %}
 	<script type="text/Javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/modules/series-label.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
-
+	<!-- CUADRO PAISES -->
 	<script src="https://code.highcharts.com/modules/heatmap.js"></script>
 	<script src="https://code.highcharts.com/modules/treemap.js"></script>
+
 	<script type="text/javascript">
 	    jQuery(document).ready(function ($) {
 	        console.log('llegando');
@@ -98,104 +117,97 @@
 				$('#example2').DataTable();
 			});
 
-			Highcharts.chart('compara', {
-
+			Highcharts.chart('aves', {
+			    chart: {
+			        type: 'column'
+			    },
 			    title: {
-			        text: 'Aves por País'
+			        text: 'Cantidad de Aves por provincia'
 			    },
-
-			    subtitle: {
-			        text: 'Conteo por Procinvias'
-			    },
-
-			    yAxis: {
+			    yAxis: [{
+			        className: 'highcharts-color-0',
 			        title: {
-			            text: 'Número de Aves'
+			            text: 'Ecuador'
 			        }
-			    },
-			    legend: {
-			        layout: 'vertical',
-			        align: 'right',
-			        verticalAlign: 'middle'
-			    },
-
-			    plotOptions: {
-			        series: {
-			            label: {
-			                connectorAllowed: false
-			            },
-			            pointStart: 2000
-			        }
-			    },
-
-			    series: [{
-			        name: 'ECUADOR',
-			        data: [
-			        		{% for e in contEc %}
-								{{e.2}},
-							{% endfor %}
-						]
 			    }, {
-			        name: 'PERÚ',
-			        data: [
-				        	{% for p in contPe %}
-								{{p.2}},
-							{% endfor %}
-						]
+			        className: 'highcharts-color-1',
+			        opposite: true,
+			        title: {
+			            text: 'Perú'
+			        }
 			    }],
-			    responsive: {
-			        rules: [{
-			            condition: {
-			                maxWidth: 500
-			            },
-			            chartOptions: {
-			                legend: {
-			                    layout: 'horizontal',
-			                    align: 'center',
-			                    verticalAlign: 'bottom'
-			                }
-			            }
-			        }]
-			    }
+			    plotOptions: {
+			        column: {
+			            borderRadius: 5
+			        }
+			    },
+			    series: [{
+			        data: [
+			        	{% for e in contEc %}
+							{{ e.2 }},
+						{% endfor %}
+			        ]
+			    }, {
+			        data: [
+			        	{% for p in contPe %}
+							{{ p.2 }},
+						{% endfor %}
+			        ],
+			        yAxis: 1
+			    }]
 			});
+
+			// AMENAZAS
+			Highcharts.chart('container', {
+		        colorAxis: {
+		            minColor: '#FFFFFF',
+		            maxColor: Highcharts.getOptions().colors[0]
+		        },
+		        series: [{
+		            type: 'treemap',
+		            layoutAlgorithm: 'squarified',
+		            data: [
+		              {% for f in datosamenaza %}
+		                {
+		                	{% if f.1 == "CR" %}
+		                		name: 'Peligro crítico',
+		                	{% elif f.1 == "EN" %}
+		                		name: 'En Peligro',
+		                	{% elif f.1 == "NT" %}
+		                		name: 'Casi Amenazado',
+	                		{% elif f.1 == "VU" %}
+		                		name: 'Vulnerable',
+		                	{% elif f.1 == "LC" %}
+		                		name: 'Preocupación Menor',
+		                	{% elif f.1 == "-" %}
+		                  		name: 'N/A',
+		                  	{% else %}
+		                  		name: '{{ f.1|default_if_none:"Datos Insuficientes" }}',
+		                  	{% endif %}
+		                  value: {{ f.2 }},
+		                  colorValue: {{ f.3 }}
+		                },
+		              {% endfor %}
+		            ]
+		        }],
+		        title: {
+		            text: '<b>Aves Amenazadas</b>'
+		        }
+		    });
 
 			//cuadros lugares
 	        var data = {
 		        {% for pais in listapais %}
-					'{{ pais.0.nombpais }}': {
+					'{{ pais.0.nombre }}': {
 						{% for provincia in pais.1 %}
-							'{{provincia.0.nombprovincia}}': {
+							'{{provincia.0.nombre}}': {
 								{% for lugares in provincia.1 %}
 									'{{ lugares.0 }}': '{{ lugares.1 }}',
 								{% endfor %}
 							},
 						{% endfor %}
 			        },
-		        {% endfor %}
-		     //    'Eastern Mediterranean': {
-		     //        'Egypt': {
-		     //            'Communicable & other Group I': '74.3',
-		     //            'Noncommunicable diseases': '781.7',
-		     //            'Injuries': '33.5'
-		     //        },
-		     //        'Tunisia': {
-		     //            'Noncommunicable diseases': '509.3',
-		     //            'Communicable & other Group I': '65.0',
-		     //            'Injuries': '39.1'
-		     //        }
-		     //    },
-		     //    'Western Pacific': {
-		     //        'Mongolia': {
-		     //            'Injuries': '69.4',
-		     //            'Noncommunicable diseases': '966.5',
-		     //            'Communicable & other Group I': '82.8'
-		     //        },
-		     //        'Republic of Korea': {
-		     //            'Injuries': '53.1',
-		     //            'Communicable & other Group I': '33.8',
-		     //            'Noncommunicable diseases': '302.1'
-		     //        }
-		    	// }
+	        	{% endfor %}
 			},
 		    points = [],
 		    regionP,

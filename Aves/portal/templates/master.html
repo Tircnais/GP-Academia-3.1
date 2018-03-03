@@ -1,126 +1,223 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="utf-8">
-		<link rel="icon" type="image/png" href="{% static 'icon/logo.png' %}" />
-		<!--meta:vp detecta la pantalla y per,ite el uso de mediaQueries-->
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-		<title>
-			AVES ECUADOR - 
-			{% block titulo %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<!-- NECESARIO PARA COMPARTIR extrae info -->
+	<meta name="description" 				content="Aplicacion de aves.">
+	<meta name="author" 					content="Cristian Aguirre">
+	<meta property="og:locale" 				content="es_ES"/>
+	<!-- en_EN -->	
+	<meta property="og:site_name" 			content="DATA SET AVES"/>
+	<meta property="og:image" 				content="https://www.utpl.edu.ec/manual_imagen/images/institucional/UTPL-INSTITUCIONAL-FC.jpg"/>
+	<link rel="icon" type="image/png" href="{% static 'icon/UTPL.png' %}" />
+	<title>
+		DATA SET AVES- 
+		{% block titulo %}
 
-			{% endblock %}
-		</title>
-		<!-- Bootstrap -->
-		<!-- Latest compiled and minified CSS. -->
-		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-3.3.7/bootstrap.css' %}">
-		<!-- Optional theme -->
-		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-3.3.7/bootstrap-theme.css' %}">
-		<!-- Fuente para Iconos -->
-		<link rel="stylesheet" type="text/css" href="{% static 'font/font.css' %}">
-		<!-- ESTILOS de la pag WEB -->
-		<link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
-		{% block style %}
 		{% endblock %}
-	</head>
-	<body class="gris2">
-	 	<div class="principal">
-	 		<div class="containernav">
-	 			<nav class="navbar navbar-inverse">
-					<div class="container">
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-								<span class="sr-only">Toggle navigation</span>
-					        	<span class="icon-bar"></span>
-						        <span class="icon-bar"></span>
-						        <span class="icon-bar"></span>
-					    	</button>
-					    	<a class="navbar-brand" href="#">Menú</a>
-					    </div>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				      		<ul>
-						     	<li><a href="{% url 'home' %}" title="INICIO"><span class="icon-home2"></span></a></li>
-						        <li><a href="{% url 'peligro' %}" title="AMENAZAS"><span class="icon-clipboard"></span></a></li>
-						        <li><a href="{% url 'mapa' %}" title="MAPA"><span class="icon-earth"></span></a></li>
-						        <li><a href="{% url 'cont' %}" title="PROVINCIAS"><span class="icon-newspaper"></span></a></li>
-						        <li><a href="{% url 'especies' %}" title="CLASIFICACION"><span class="icon-key"></span></a></li>
-						        <li><a href="https://github.com/programacion-taw-utpl-001/gp31-final-grupo003" title="PROYECTO-GIT"><span class="icon-github"></span></a></li>
-					        </ul>
-				    	</div><!-- /.navbar-collapse -->
-					</div><!-- /.container-fluid -->
-				</nav>
-			</div>
-        	<div class="container">
-        		<header class="row">
-		           <hgroup class="container logo">
-	            		<h1 id="titulo">UTPL</h1>
-	            		<h3 id="subtitulo">DATA Set AVES</h3>
-	            </hgroup>
-	            </header>
-        		<main class="row gris">
-            		{% block contenido %}
-            			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptates, saepe? Obcaecati reprehenderit, deserunt nihil repellat aspernatur pariatur animi ipsa, accusantium totam amet dignissimos incidunt quam quae omnis ad facere.</p>
-					{% endblock %}
-        		</main>
-			</div>
-			<footer class="container">
-				{% block footer %}
+	</title>
 
-				{% endblock %}
-				<div class="row">
-					<div class="col-xs-4">
-						<div class="row borde">
-							<div class="col-xs-4">
-								<img class="img-responsive img-rounded" src="https://scontent.fatf1-1.fna.fbcdn.net/v/t1.0-9/23754790_886500581520821_3034496136919281559_n.jpg?oh=55849698fd68f45ad6288d48210bb060&oe=5ADE9440" alt="">
-							</div>
-							<div class="col-xs-8">
-								<label>Nombre:</label>
-								<p>Cristian Aguirre</p>
-								<label>Facebook</label>
-								<a href="https://www.facebook.com/cristian.aguirre.9615566"><span class="icon-facebook facebook"></span></a>
-							</div>
-						</div>
-					</div>
-					<small class="col-xs-4">
-						<span class="font-peque">Developed By</span>
-						<span class="font-medio">Cristian</span>
-						<span class="font-grande">&</span>
-						<span class="font-medio">Rocío</span>
-						<span class="font-peque">© Copyright 2018</span>
-					</small>
-					<div class="col-xs-4">
-						<div class="row borde">
-							<div class="col-xs-8">
-								<label>Nombre:</label>
-								<p>Rocio Jaramillo</p>
-								<label>Facebook</label>
-								<a href="https://www.facebook.com/rocio.jaramillorosales"><span class="icon-facebook facebook"></span></a>
-							</div>
-							<div class="col-xs-4">
-								<img class="img-responsive img-rounded" src="https://scontent.fatf1-1.fna.fbcdn.net/v/t1.0-9/25594184_950872738384995_7615326129099385420_n.jpg?oh=e3aa6a70d32a8c718b79f246a92319b4&oe=5ADC99A5" alt="">
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-			<span class="icon-home2 ir-arriba"></span>
-		
-			<!-- Latest compiled and minified JavaScript -->
-			<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
-			<script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
-			
-			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-			<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-			<script type="text/javascript" src="{% static 'js/acciones.js' %}"></script>
-			<script src="{% static 'js/bootstrap.min.js' %}"></script>
-	    	<script src="{% static 'css/bootstrap-3.3.7/js/jquery.min.js' %}"></script>
-			{% block script %}
+	<link rel="shortcut icon" href="{% static 'assets/images/gt_favicon.png' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
 
-			{% endblock %}	
+	<!-- Custom styles for our template -->
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap-theme.css' %}" media="screen" >
+	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+
+	<link rel="stylesheet" href="{% static 'font/font.css' %}">
+	<!-- ESTILOS de la pag WEB -->
+	<link rel="stylesheet" href="{% static 'css/ihover.css' %}"
+	<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="assets/js/html5shiv.js"></script>
+	<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+	{% block style %}
+
+	{% endblock %}
+</head>
+
+<body class="home">
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'assets/images/logo.png' %}" alt="DATA SET AVES"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li>
+						<a href="{% url 'home' %}"><span class="icon-home2"></span>INICIO</a>
+					</li>
+			        <li>
+			        	<a href="{% url 'mapa' %}"><span class="icon-earth"></span>MAPA</a>
+			        </li>
+			        <li>
+			        	<a href="{% url 'cont' %}"><span class="icon-stats-dots"></span>DETALLE</a>
+			        </li>
+			        <li>
+			        	<a href="{% url 'especies' %}"><span class="icon-stats-bars2"></span>CLASIFICACION</a>
+			        </li>
+			        <li>
+			        	<a href="https://github.com/programacion-taw-utpl-001/gp31-final-grupo003" GIT"><span class="icon-github"></span>PROYECTO-GIT</a>
+			        </li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mas<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#contactos"><span class="icon-address-book"></span>CONTACTO</a></li>
+							<li><a href="#redes"><span class="icon-link"></span>REDES Sociales</a></li>
+							<li><a href="{% url 'autores' %}"><span class="icon-key"></span>AUTORES</a></li>
+							<li class="active"><a href="{% url 'fotos' %}"><span class="icon-images"></span>GALERIA</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!--/.nav-collapse -->
 		</div>
-	</body>
-</html>
+	</div> 
+	<!-- /.navbar -->
 
+	<!-- Header -->
+	<header id="head">
+		<div class="container">
+			<div class="row">
+				<h1 class="lead">PROYECTO AVES</h1>
+				<p class="tagline">Herramienta principal <a href="https://www.utpl.edu.ec/centros_utpl/public/images/campus-utpl.jpg">DJANGO 1.8</a></p>
+				<p>
+					<a href="http://ambar.utpl.edu.ec/sv/dataset/aves-ecuador" class="btn btn-default btn-lg" role="button">DATA SET</a>
+					<a href="#" class="btn btn-action btn-lg" role="button">Wiki</a>
+				</p>
+			</div>
+		</div>
+	</header>
+	<!-- /Header -->
+		
+	<!-- Highlights - jumbotron -->
+	<div class="jumbotron top-space">
+		<div class="container">
+			{% block contenido %}
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore voluptates, saepe? Obcaecati reprehenderit, deserunt nihil repellat aspernatur pariatur animi ipsa, accusantium totam amet dignissimos incidunt quam quae omnis ad facere.
+				</p>
+			{% endblock %}
+		</div>
+	</div>
+	<!-- /Highlights -->
+	
+	<!-- Social links. @TODO: replace by link/instructions in template -->
+	<section id="social">
+		<div class="container">
+			<div class="wrapper clearfix">
+				<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style">
+				<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+				<a class="addthis_button_tweet"></a>
+				<a class="addthis_button_linkedin_counter"></a>
+				<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+				</div>
+				<!-- AddThis Button END -->
+			</div>
+		</div>
+	</section>
+	<!-- /social links -->
+
+
+	<footer id="footer" class="top-space">
+
+		<div class="footer1">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 widget" id="contactos">
+						<h3 class="widget-title">Contacto</h3>
+						<div class="widget-body">
+							<label>Nombre:</label>
+							<p>Cristian Aguirre</p>
+							<p>+234 23 9873237<br>
+								<a href="mailto:#">ceaguirre6@utpl.edu.ec</a><br>
+								<br>
+								La Banda, Loja
+							</p>
+							<a href="https://www.facebook.com/cristian.aguirre.9615566"><span class="icon-facebook facebook"></span>Facebook</a>
+						</div>
+					</div>
+
+					<div class="col-md-3 widget" id="redes">
+						<h3 class="widget-title">Sigueme en</h3>
+						<div class="widget-body">
+							<p class="follow-me-icons">
+								<a href="https://plus.google.com/u/0/110816358681860828283"><span class="icon-google-plus"></span></a>
+								<a href="https://github.com/Tircnais"><i class="fa fa-github fa-2"></i></a>
+								<a href="https://www.facebook.com/cristian.aguirre.9615566"><i class="fa fa-facebook fa-2"></i></a>
+							</p>	
+						</div>
+					</div>
+
+					<div class="col-md-6 widget">
+						<h3 class="widget-title">Proyecto de Formación en Academias GP 3.1</h3>
+						<div class="widget-body">
+							<p>Creación de una aplicación web, con el uso del Framework DJANGO, en su versión 1.8</p>
+							<p>Recurso: Data Set de Aves, DB correspondiente.</p>
+						</div>
+					</div>
+
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+
+		<div class="footer2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="simplenav">
+								<a href="{% url 'home' %}"><span class="icon-home2"></span>INICIO</a> |
+								<a href="{% url 'fotos' %}">GALERIA</a>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 widget">
+						<div class="widget-body">
+							<p class="text-right">
+								Copyright &copy; 2018, Cristian Aguirre. Desiñado en DJANGO</a> 
+							</p>
+						</div>
+					</div>
+				</div> <!-- /row of widgets -->
+			</div>
+		</div>
+	</footer>
+	<span class="icon-home2 ir-arriba"></span>
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+	<!--<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+	<script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/js/headroom.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/js/jQuery.headroom.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/js/template.js' %}"></script>
+		
+	<!-- Latest compiled and minified JavaScript -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="{% static 'js/acciones.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'css/bootstrap-3.3.7/js/jquery.min.js' %}"></script>	
+	{% block script %}
+		
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,747 @@
+id_localizacion,nombre,latitud,longitud,toponimo,altitud,max_altitud,min_altitud,ecosistema,Provincia_id_provincia
+1,niapique,-5.48962,-80.6922,,,,,,21
+2,"0.5 km W Centro Poblado ""Prialle""",-6.40357,-79.5013,,,,,,14
+3,1 km N Sechura,-5.54396,-80.82,,,,,,21
+4,10 km E Olmos,-5.95,-79.69302,,,,,,14
+5,11 km N Tayanca,-6.30053,-79.83333,,,,,,14
+6,11 km N. 28 km E Cabo Blanco,-4.21719,-80.99776,,,,,,21
+7,11 km S. 11 km E of Bayovar,-5.94947,-80.96734,,,,,,21
+8,12 mi ENE of Olmos,-5.88356,-79.62313,,,,,,14
+9,15 km NE Motupe,-6.02729,-79.6808,,,,,,14
+10,15 mi W Auiruvilca,-8,-78.53437,,,,,,13
+11,15 mi W Quiruvilca,-8,-78.53437,,,,,,13
+12,16 km N Olmos - 4 km NE Mano de Le??n - 200 m,-5.84852,-79.7044,,,,,,14
+13,19 km W Huancabamba,-5.23333,-79.63806,,,,,,21
+14,2 km E of Landirca,-5823,-79522,,,,,,21
+15,2 km SE of Morrope,-6.56279,-80.00388,,,,,,14
+16,2 km south of Playa Hermosa,-6.87246,-79.9306,,,,,,14
+17,2 mi SE Morrope,-6.57046,-79.99621,,,,,,14
+18,3 km S Guayaquil,-2.19413,-79.9,,,,,,12
+19,3 km SE Morrope,-6.55252,-79.99749,,,,,,14
+20,3 km SE of Morrope,-6.56918,-79.99749,,,,,,14
+21,3.2 km E of Chongoyape,-6642,-79.36,,,,,,14
+22,4 km SE Bayovar,-5.87558,-81.04113,,,,,,21
+23,4 km wash,-4.15331,-79.9065,,,,,,16
+24,4.31 km E of Choropampa on road to Cajamarca,-7.27838,-78.5412,,,,,,4
+25,40 km E Piura,-5.2,-80.27253,,,,,,21
+26,40 km W Piura,-5.2,-80.99413,,,,,,21
+27,5 km N Talara,-4.53034,-81.26889,,,,,,21
+28,5 km NE Pacasmayo,-7.3664,-79.53435,,,,,,13
+29,5 km S Los Lomas. 60 km ENE Sullana,-5.08611,-79.61852,,,,,,21
+30,5 km SW of Llama,-6531,-79131,,,,,,4
+31,5.4 km SE Contumaza,-7.40383,-78.77978,,,,,,4
+32,-6.9032x-79.7808 - Jun 12 - 2013 - 10:00 AM,-6.90324,-79.7808,,,,,,14
+33,-7.1705x-79.4402 - Jun 12 - 2013 - 11:06 AM,-7.17053,-79.4402,,,,,,13
+34,-7.2225x-78.8388 - Jun 12 - 2013 - 3:31 PM,-7.22251,-78.8388,,,,,,4
+35,Abajo de Agua Blanca,-7.04854,-79.0657,,,,,,4
+36,Abajo de Miravalles,-7.01192,-79.1118,,,,,,4
+37,Abajo de Paucal,-6.9941,-79.14,,,,,,4
+38,Above Monteverde Salt Lake,-2.02845,-80.7197,,,,,,22
+39,Abra Gavilan surroundings,-7.25724,-78.4738,,,,,,4
+40,Abra Porculla,-5.88389,-79.5433,,,,,,21
+41,Abra Porculla--lower portion,-5.88499,-79.5484,,,,,,21
+42,ACP Bosque Seco Amotape - Bosque,-3.65046,-80.6125,,,,,,24
+43,ACP Bosque Seco Amotape - Hotel,-3.64622,-80.6118,,,,,,24
+44,ACP Chaparri,-6.53964,-79.4757,,,,,,14
+45,ACP Chaparri--Chaparri Ecolodge,-6.54389,-79.4814,,,,,,14
+46,Agua Blanca,-1.53464,-80736,,,,,,18
+47,Agua Blanca - -1.530754 - -80.740766,-1.53075,-80.7408,,,,,,18
+48,Alamor,-4,-79.96666667,Alamor-Celica,,1500,900,Bosque humedo montano/Bosque seco semidesiduo,16
+49,Alrededores de Batanes 1,-5.13865,-80.0991,,,,,,21
+50,Alrededores de Batanes 2,-5.14023,-80.0948,,,,,,21
+51,Anconcito,-2.33583,-80.8906,,,,,,22
+52,Anconcito--vicinity,-2.31185,-80.8846,,,,,,22
+53,Arenillas,-3.570955556,-80.14615278,REMA,30,,,Transicion entre bosque seco deciduo y matorral seco de tierras bajas,8
+54,Arenillas,-3.51,-80.14,Reserva Arenillas,,300,0,Bosque desiduo de tierras bajas/Matorral seco tropical,8
+55,Aroma Cafe - -2.187311 - -79.876992,-2.18731,-79877,,,,,,12
+56,Arriba de Miravalles 1,-6.99387,-79.0931,,,,,,4
+57,Arriba de Nanchoc,-6.97771,-79.1831,,,,,,4
+58,Asuncion,-3.183333333,-79.28333333,Yunguilla,,2600,1550,Bosque humedo/Matorral seco,2
+59,Atahualpa--vicinity,-2.31186,-80.7735,,,,,,22
+60,Ayabaca,-4.616666667,-79.73333333,Bosque de Cuyas,,3100,2200,Bosque montano,1
+61,Ayampe,-1.67642,-80803,,,,,,18
+62,Ayampe and vicinity,-1.67724,-80.8064,,,,,,12
+63,Ayampe--Jocotoco Foundation Reserve,-1.67537,-80.7937,,,,,,18
+64,Ayampe--river delta wetlands,-1.67632,-80.8136,,,,,,18
+65,Ayampe--river road,-1.67579,-80.8061,,,,,,18
+66,Ayampe--vicinity,-1.67587,-80.7961,,,,,,18
+67,Ayangue,-1.866666667,-80.63333333,Loma Alta,,830,200,Bosque de gurua/Bosque desiduo,12
+68,BABAHOYO & QUINDIVA: ABOVE,-1.80217,-79.53443,,,,,,17
+69,Bahia de Caraques,-0.68,-80.46,Coordillera del Balsamo,,600,0,Bosque muy seco tropical,18
+70,Bahia de Caraquez - Ecuador,-0.59696,-80.4231,,,,,,18
+71,Bajo Alto - -3.107921 - -79.899684,-3.10792,-79.8997,,,,,,8
+72,Ballenita,-2.20136,-80.8719,,,,,,22
+73,Balzar-gabarra,-1.36504,-79.9096,,,,,,12
+74,Barrancos. 11 km N and 28 km E Cabo Blanco,-4.2,-81,,,,,,21
+75,Barrio El Corral,-4.35824,-79797,,,,,,16
+76,BATAN,-1.16667,-79.91667,,,,,,19
+77,Bayovar,-5.85,-81.06667,,,,,,21
+78,beach-watch from punta carnero to la puntilla,-2.28781,-80.9134,,,,,,22
+79,Bernal  Piura town for shorebird training workshop,-5.45862,-80.7417,,,,,,21
+80,Bernal (Piura town for shorebird training workshop),-5.45862,-80.7417,,,,,,21
+81,Boca de Pescadillo,-0.75528,-79.6722,,,,,,18
+82,Boca del Rio Chira-Gramadal,-4.89576,-81.1427,,,,,,21
+83,Boca del Rio Zania--rio,-7.07219,-79.7115,,,,,,14
+84,Boca del Rio Zania--vegetacion corta,-7.08467,-79.7152,,,,,,14
+85,Bosque Cachil,-7704,-78777,,,,,,13
+86,Bosque Cachil,-7.40354,-78.7747,,,,,,4
+87,Bosque de Casupe,-6.46788,-79.3895,,,,,,4
+88,Bosque de Pomac - nidos,-6.46046,-79.7988,,,,,,14
+89,Bosque de Pomac--lomas de sur,-6.50552,-79767,,,,,,14
+90,Bosque de Pomac--Prosopsis viejo,-6.48757,-79.7645,,,,,,14
+91,Bosque El Canioncillo,-7.39064,-79.4237,,,,,,13
+92,Bosque Pomac - open scrub,-6.49339,-79.7686,,,,,,14
+93,Bosque protector cerro blanco,-2.24458,-80.1484,,,,,,12
+94,Bosque Protector el Paraiso (sector canchas),-2.17019,-79.9252,,,,,,12
+95,Bosque Protector Pedro Franco Davila,-1.34798,-79.6655,,,,,,17
+96,Bosque Seco Lalo Loor,-0.08789,-80.1602,,,,,,18
+97,Bosque Seco--en route to Olmos,-5.34875,-80.0663,,,,,,21
+98,bosque UDEP,-5.17247,-80.6417,,,,,,21
+99,BP Cerro Blanco,-2.16572,-80.0313,,,,,,12
+100,Buen - Jorupe - 3 42 17 : 79 38 0,-3.70472,-79.6333,,,,,,8
+101,Buen - Jorupe - 3 48 11 : 79 34 31,-3.80306,-79.5753,,,,,,16
+102,Buen - Jorupe - 3 54 42 : 79 32 30,-3.91167,-79.5417,,,,,,16
+103,Buen - Jorupe - 3 55 51 : 79 30 32,-3.93083,-79.5089,,,,,,16
+104,Buen - Jorupe - 3 57 42 : 79 28 35,-3.96167,-79.4764,,,,,,16
+105,Buen - Jorupe - 4 1 45 : 79 41 38,-4.02917,-79.6939,,,,,,16
+106,Buen - Jorupe - 4 14 32 : 79 52 47,-4.24222,-79.8797,,,,,,16
+107,Buen - Jorupe - 4 2 14 : 79 38 46,-4.03722,-79.6461,,,,,,16
+108,Buen - Jorupe - 4 9 18 : 79 51 50,-4155,-79.8639,,,,,,16
+109,Buena Ventura Lodge - -3.654109 - -79.768878,-3.65411,-79.7689,,,,,,8
+110,Buena Ventura North - -3.634830 - -79.751204,-3.63483,-79.7512,,,,,,8
+111,Buena Ventura Umbrellabird Trail - -3.652503 - -79.762352,-3.6525,-79.7624,,,,,,8
+112,Buenafe,-0.583333333,-79.36666667,Rio Palenque,,200,100,Bosque humedo tropical/Plantaciones de palma y macadamia,17
+113,Buenaventura - 3 37 25 : 79 45 18,-3.62361,-79755,,,,,,8
+114,Buenaventura - 3 38 1 : 79 45 03,-3.63361,-79.7508,,,,,,8
+115,Buenaventura - 3 38 57 : 79 45 25,-3.64917,-79.7569,,,,,,8
+116,Buenaventura - 3 39 10 : 79 44 37,-3.65278,-79.7436,,,,,,8
+117,Buenaventura - 3 39 14 : 79 45 51,-3.65389,-79.7642,,,,,,8
+118,Buenaventura - 3 39 17 : 79 44 33,-3.65472,-79.7425,,,,,,8
+119,Buenaventura Hummingbird Garden - 3 39 39 : 79 46 08,-3.66083,-79.7689,,,,,,8
+120,Buenaventura Reserve--general area,-3.64844,-79.7556,,,,,,8
+121,Buenaventura-Macara,-4.03939,-79.7607,,,,,,16
+122,Buenaventura--Upper road,-3.62578,-79.7543,,,,,,8
+123,ca. 9.8 km N Olmos,-5.89157,-79.78822,,,,,,14
+124,ca. 9.8 km N. of Olmos,-5.89343,-79.78744,,,,,,14
+125,Cabo Pasado,-0.39516,-80.4807,,,,,,18
+126,Cajamarca--San Pablo Rd.,-7.14029,-78.8444,,,,,,4
+127,Cajamarca-Trujillo highway,-7.29115,-78.8178,,,,,,4
+128,Cajanuma - Podocarpus National Park - -4.116213 - -79.171995,-4.11621,-79172,,,,,,16
+129,Camino a Paucal,-6.99492,-79.1427,,,,,,4
+130,Campanario Quizas Hoy  acceso restringido,-2.60637,-79.4741,,,,,,12
+131,Campanario Quizas Hoy (acceso restringido),-2.60637,-79.4741,,,,,,12
+132,Canaan Hosteria,-3.25623,-79282,,,,,,2
+133,Canoa,-0.46314,-80.4549,,,,,,18
+134,Canoas,-3.9277,-80.9105,,,,,,24
+135,Cariamanga--vicinity,-4.32619,-79.5551,,,,,,16
+136,Casa Andina - Chiclayo,-6.77151,-79.8466,,,,,,14
+137,Casa Vinces,-1.31355,-79.5717,,,,,,17
+138,Casupe,-6.48395,-79381,,,,,,4
+139,Catacocha,-4.05,-79.66666667,,,1750,1400,Bosque seco semidesiduo/Bosque desiduo montano,16
+140,Catacocha area,-4.04629,-79.6493,,,,,,16
+141,Catamayo,-4.216666667,-79.91666667,Canion Rio Catamayo,,1480,250,Bosque seco semidesiduo piemontano/remanentes de bosque de neblina,16
+142,Catamayo - 3 59 9 : 79 20 47,-3.98583,-79.3464,,,,,,16
+143,Catamayo Gravel pits,-4.01496,-79.3721,,,,,,16
+144,Catamayo--vicinity (including Loja airport),-3.99187,-79364,,,,,,16
+145,Cazaderos,-4.116666667,-80.4,El Faique/Balneario del inca,,550,450,Bosque seco desiduo,16
+146,Cazaderos,-4.066666667,-80.28333333,Quebrada Achiotes,330,,,Bosque seco desiduo,16
+147,CC El Angolo - Queb Sauce Grande,-4.34683,-80.7601,,,,,,21
+148,CC El Angolo--Quebrada Fernandez,-4.2152,-80.8839,,,,,,21
+149,Cementerio General,-2.17887,-79.8865,,,,,,12
+150,Cerca Puente Cumbil,-6.61353,-79.2435,,,,,,4
+151,Cerra Salinas,-6.49109,-79.7966,,,,,,14
+152,Cerritos,-0.78125,-79456,,,,,,17
+153,Cerro Blanco,-2.24388,-80.1416,,,,,,12
+154,Cerro Blanco - -2.186624 - -80.017558,-2.18662,-80.0176,,,,,,12
+155,Cerro Blanco - Bosque Protector,-2.24802,-80.1468,,,,,,12
+156,Cerro Blanco - Rd. E70,-2.23526,-80114,,,,,,12
+157,Cerro Campana,-7.98435,-79.0943,,,,,,13
+158,Cerro El Poto,-4.56313,-79991,,,,,,21
+159,CERRO PARAISO,-2.17095,-79.9255,,,,,,12
+160,Cerro Toledo,-4.39023,-79.1259,,,,,,16
+161,Chanduy,-2.40477,-80.6933,,,,,,22
+162,Chaparri,-6.53972,-79.4756,,,,,,14
+163,Chaparri Area  Many stops ?,-6.64247,-79.3356,,,,,,4
+164,Chaparri Area (Many stops)?,-6.64247,-79.3356,,,,,,4
+165,Chaparri to Tinajones Reservoir to Bosque Frejalillo,-6.71605,-79.3585,,,,,,14
+166,Chappari Reserve,-6.73962,-79.3515,,,,,,14
+167,Chepen  town,-7.2208,-79.4351,,,,,,13
+168,Chepen (town),-7.2208,-79.4351,,,,,,13
+169,Chiclayo,-6.483333333,-79.76666667,Bosque de Pomac,,200,100,Bosque seco ecuatorial,11
+170,Chiclayo - Carretera a AGRORURAL LAMBAYEQUE,-6.69755,-79.7537,,,,,,14
+171,Chiclayo - Oltursa,-6.7699,-79.8451,,,,,,14
+172,Chiclayo - Pimentel,-6.83934,-79937,,,,,,14
+173,Chiclayo - Plantcutter site,-7.0339,-79688,,,,,,14
+174,Chiclayo Area  Many stops,-6.79522,-79.8533,,,,,,14
+175,Chiclayo Area (Many stops),-6.79522,-79.8533,,,,,,14
+176,Chone,-0.70607,-80.1144,,,,,,18
+177,Chongon,-2.23596,-80.07841,,,,,,12
+178,Chongoyape ,-6.637166667,-79.3865,Chaparri,,200,100,Bosque seco mixto,6
+179,Chontillal - Milagro,-2.12883,-79.5667,,,,,,12
+180,Chontillal - Rio Milagro,-2.13536,-79548,,,,,,12
+181,Choten,-7.25926,-78.5104,,,,,,4
+182,Ciudad de Dios and PE-8 to east,-7.30381,-79.4753,,,,,,13
+183,Cliffs before Ciudad de Dios,-7.29402,-79.4797,,,,,,13
+184,Colimes - 4 -5 km al este de,-1.54168,-79.9592,,,,,,12
+185,Consuelo,-2.35081,-80.5081,,,,,,22
+186,Crist??bal Col??n,-0.93215,-79.7446,,,,,,12
+187,Cruz de Motupe,-6.09327,-79.7316,,,,,,14
+188,Data de Villamil - Playas,-2.70937,-80.3187,,,,,,12
+189,Daule,-1867,-79933,,,,,,12
+190,Debajo del Pueblo Limon de Porculla,-5.88039,-79.5211,,,,,,21
+191,Desert scrub around Progreso,-2.39345,-80.3695,,,,,,12
+192,Distrito Sinsicap,-7.98512,-78898,,,,,,13
+193,Don Juan,-0.14429,-80.2317,,,,,,18
+194,Drive to Puerto Lopez - -1.265039 - -80.783230,-1.26504,-80.7832,,,,,,18
+195,Duran,-2.27899,-79.53,,,,,,12
+196,E of Chanchaque,-5381,-79573,,,,,,21
+197,E25 at a toll booth,-3.09367,-79.7653,,,,,,8
+198,E25 from Churute (Guayas) to Santa Rosa (El Oro),-3.41335,-79.9482,,,,,,8
+199,E25 south of Boliche,-2.29736,-79.6396,,,,,,12
+200,East of Insculas,-5.5,-79.7167,,,,,,21
+201,"East of San Pedro de Vilcabamba - Reserva ""El Bosque""",-4.2162,-79.1369,,,,,,16
+202,EC - Area along road between Yangana and Reserva Tapachilaca,-4.38167,-79.1761,,,,,,16
+203,EC - area near Cerro Alto,-2.18169,-80.7631,,,,,,22
+204,EC - Buenaventura Reserve  approx,-3.67224,-79.6757,,,,,,8
+205,EC - Buenaventura Reserve (approx),-3.67224,-79.6757,,,,,,8
+206,EC - El Empalme,-4.1605,-79.8613,,,,,,16
+207,EC - Guayaquil,-2.20427,-79.8965,,,,,,12
+208,EC - Hwy 1 - Cayo to Jipijapa,-1.36655,-80.6933,,,,,,18
+209,EC - Hwy 9 S. of Jipijapa  (approx. location),-1.68856,-80441,,,,,,18
+210,EC - Puerto Lopez,-1.55952,-80.8134,,,,,,18
+211,EC - Salt ponds near Monteverde,-2.08034,-80.7365,,,,,,22
+212,EC - Santa Isabel,-3.27472,-79.3153,,,,,,2
+213,EC - Utuana Reserve,-4.35796,-79.7028,,,,,,16
+214,EC - Yunguilla Reserve - Jocotoco Fndn,-3.25552,-79.3232,,,,,,2
+215,EC - Zozoranga,-4.32827,-79.7903,,,,,,16
+216,EC El Oro - Puerto Jeli,-3.38409,-80.0545,,,,,,8
+217,EC El Oro - Traveling on E-25 near El Guabo Canton,-3.24462,-79.8264,,,,,,8
+218,EC Guayas - An Organic Coca farm near Naranjal,-2.65602,-79.6228,,,,,,12
+219,EC Guayas - Bosque Protector Cerro Blanco,-2.24347,-80156,,,,,,12
+220,EC Guayas - Manglares Churute Ecological Reserve,-2.48598,-79.6683,,,,,,12
+221,EC Guayas - Traveling on E-25 south of Guayaquil,-2.22096,-79.6958,,,,,,12
+222,EC Guayas - Traveling on E-70,-2.35716,-80.2847,,,,,,12
+223,EC Loja - Near Alamor,-4.01853,-80.0299,,,,,,16
+224,EC Loja - Town of Catacocha,-4.04845,-79.6495,,,,,,16
+225,EC Loja - Town of Sozoranga,-4.3277,-79.7895,,,,,,16
+226,EC Manabi - Aqua Blanca - Machalilla NP,-1.52913,-80742,,,,,,18
+227,EC Manibi - General Machalilla National Park,-1538,-80.6795,,,,,,18
+228,EC Santa Elena -  Punta Carnero,-2.29233,-80.9149,,,,,,22
+229,EC Santa Elena - Atamiri Hotel Road,-1.69241,-80.8107,,,,,,22
+230,EC Santa Elena - La Puntila - western most point  South America.,-2.18844,-81.0104,,,,,,22
+231,EC Santa Elena - Traveling on E-1,-2.18199,-80.8351,,,,,,22
+232,Ecu. Jardin de Colibris,-3.68063,-79.6591,,,,,,8
+233,Ecuador - Guayaquil Airport,-2.14793,-79.8836,,,,,,12
+234,Ecuador - Manta,-0.95577,-80.7111,,,,,,18
+235,Ecuador: Ayampe,-2.06674,-80.7355,,,,,,22
+236,Ecuador: Puerto Lopez - South,-1.56686,-80.8259,,,,,,18
+237,Ecuasal Lagoon - -2.266932 - -80.927854,-2.26693,-80.9279,,,,,,22
+238,El Angolo Hunting Reserve,-4.36486,-80.7393,,,,,,21
+239,El Cajas-Guayaquil 145 m above banana belt,-2.58592,-79.4731,,,,,,12
+240,El Carmen-Tapichalaca,-4.19974,-79.2168,,,,,,16
+241,El Cholocal - Simbal,-7.97602,-78.8207,,,,,,13
+242,El Empalme,-4.14852,-79.8485,,,,,,16
+243,El Empalme--Cattle Trail,-4.1703,-79.8595,,,,,,16
+244,El Empalme-Celica Road,-4.14755,-79.8883,,,,,,16
+245,el ingenio,-4.41495,-79.4371,,,,,,16
+246,El Malecon Guayaquil,-2192,-79.8794,,,,,,12
+247,El Pital Bola de Oro,-1.5237,-80.7462,,,,,,18
+248,El Play??n,-3.58139,-79.9124,,,,,,8
+249,El Rosario - El Empalme,-1.05085,-79.8164,,,,,,12
+250,El Suspiro,-1.90019,-80.65,,,,,,22
+251,El Suspiro and riparian zone,-1.88999,-80.6201,,,,,,22
+252,El Tocto,-5.87143,-79.7718,,,,,,14
+253,el tundo reserve,-4.3223,-79.8046,,,,,,16
+254,El Tutumo,-4.41351,-79.8985,,,,,,21
+255,Embalse Tinajones,-6.6318,-79.4531,,,,,,14
+256,Empalme junction to Macara,-4.24919,-79.8868,,,,,,16
+257,Estero Banife,-1.86198,-79.9782,,,,,,12
+258,Estero La Balandra,-2.60717,-79.8339,,,,,,12
+259,Estero Los Monos,-2.18043,-79.6164,,,,,,12
+260,Estero Ulpiano - Reserva Churute,-2.44878,-79.7126,,,,,,12
+261,Estuario de Virilla,-5.78492,-80.8649,,,,,,21
+262,Faclo Grande to La Boca,-7.34178,-79.5755,,,,,,13
+263,Flooded Rice Fields,-6.40923,-79.5387,,,,,,14
+264,Fondo. 14 km N and 13 km E Talara,-4.44006,-81.16618,,,,,,21
+265,Frejolillo  Limon : pampa noreste,-5.70776,-79.7262,,,,,,21
+266,Frejolillo  Limon : Pampa suroeste,-5.70929,-79.7299,,,,,,21
+267,Frejolillo - White-winged Guan site,-5.70825,-79.7258,,,,,,21
+268,Frejolillo (Limon): campamento,-5.70252,-79.7319,,,,,,21
+269,Frejolillo (Limon): entrada,-5.69977,-79.7374,,,,,,21
+270,Frejolillo (Limon): pampa noreste,-5.70776,-79.7262,,,,,,21
+271,Frejolillo (Limon): Pampa suroeste,-5.70929,-79.7299,,,,,,21
+272,From 1/2 km N Santa Rosa 1.9 km towards Pimentel,-6.86862,-79927,,,,,,14
+273,Fuerte Militar - -2.195825 - -80.993472,-2.19583,-80.9935,,,,,,22
+274,Garza Real,-4.233333333,-80.25,La Ceiba,,600,400,Bosque desiduo de tierras bajas ,16
+275,Gas Station at Chaguarpamba,-3.87691,-79.6446,,,,,,16
+276,Giron,-3.16076,-79.14752,,,,,,2
+277,Giron - down to Santa Isabel,-3.23569,-79.2286,,,,,,2
+278,Golondrinas Huaca Site,-6.45178,-79.7985,,,,,,14
+279,Granja de Camaron Cardalito,-3.81477,-80.8155,,,,,,24
+280,Grifa PetroPeru,-5.16333,-80.6926,,,,,,21
+281,Grifa San Jose II,-5.17295,-80.6814,,,,,,21
+282,Guay - Buen 2 34 6 : 79 32 19,-2.56833,-79.5386,,,,,,12
+283,Guay - Buen 2 41 27 : 79 38 30,-2.69083,-79.6417,,,,,,12
+284,Guay - Buen 2 42 34 : 79 39 17,-2.70944,-79.6547,,,,,,12
+285,Guay - Buen 3 18 26 : 79 53 29,-3.30722,-79.8914,,,,,,8
+286,Guay - Buen 3 25 3 : 79 57 9,-3.4175,-79.9525,,,,,,8
+287,Guay - Buen 3 34 50 : 79 56 5,-3.58056,-79.9347,,,,,,8
+288,Guay - Buen 3 39 5 : 79 46 50,-3.65139,-79.7806,,,,,,8
+289,Guayaquil,-2.166666667,-80.03333333,Cerro Blanco,,420,100,Bosque seco desiduo,12
+290,Guayaquil,-1.333333333,-79.58333333,Jauneche,70,,,Bosque seco desiduo,3
+291,Guayaquil - Cerro Blanco,-2.11667,-80.0833,,,,,,12
+292,Guayaquil - Ecuador,-2.20272,-79.8948,,,,,,12
+293,Guayaquil - URBASUR,-2.24371,-79884,,,,,,12
+294,Guayaquil airport,-2.15722,-79.8823,,,,,,12
+295,Guayaquil--Malecon 2000,-2.19509,-79.8802,,,,,,12
+296,Guayaquil--Parque Seminario (Simon Bolivar monument),-2.19472,-79.8833,,,,,,12
+297,Guayas Province,-2.88098,-79.7048,,,,,,12
+298,Guyaquil Airport,-2.15812,-79.8837,,,,,,12
+299,Highway E25--Puerto Inca,-2.53867,-79546,,,,,,12
+300,Highway E25--Tauro,-2.24215,-79.6374,,,,,,12
+301,Highway E35--Potrerillo,-4.24207,-79.8795,,,,,,16
+302,Highway E35--roadsides near Reserva Huashapamba,-3.65806,-79.2697,,,,,,16
+303,Highway E582--Large-billed Seed-Finch Area,-2.54925,-79.5187,,,,,,12
+304,Highway E582--Puerto Inca,-2.57131,-79488,,,,,,12
+305,Hondo,-2.19011,-80.0267,,,,,,12
+306,Honorato Vasquez,-1.11234,-80.2065,,,,,,18
+307,Hospedaje San Juan,-5.5742,-80827,,,,,,21
+308,Huabal (pueblo),-5.40063,-79.6578,,,,,,21
+309,Humedal Abras de Mantequilla,-1.52508,-79.5453,,,,,,17
+310,Humedal El Tubo,-7.7073,-79.4174,,,,,,13
+311,Humedales de Bocapan,-3.71441,-80.7303,,,,,,24
+312,Humedales de Eten  Valqui E5.2,-6.91331,-79.8812,,,,,,14
+313,Humedales de Eten (Valqui E5.2),-6.91331,-79.8812,,,,,,14
+314,Humedales de Mancora  Dept. Piura,-4.08769,-81.0425,,,,,,21
+315,Humedales de Mancora  Dept. Tumbes,-4.08422,-81041,,,,,,24
+316,Humedales de Pacoa,-2.07892,-80.7359,,,,,,22
+317,Humedales Puerto Eten,-6.91582,-79.8758,,,,,,14
+318,Hwy 1 Ayampe <-> Santa Elena,-2.10147,-80.7465,,,,,,22
+319,Hwy 40 east of Duran,-2.21273,-79.7201,,,,,,12
+320,Hwy 70 west of Guayaquil,-2.2905,-80.1972,,,,,,12
+321,Hwy E1--Puerto Lopez to Salinas,-2.07974,-80.7368,,,,,,22
+322,Hwy: Santo Domingo<-->Rio Palenque,-0.45456,-79.3296,,,,,,23
+323,Illimo,-6.4184,-79.8357,,,,,,14
+324,Isla Coraz??n,-0.65161,-80.3707,,,,,,18
+325,Isla Corazon -  Ecuador,-0.65046,-80.3716,,,,,,18
+326,Isla de la Plata,-1.2729,-81.0704,,,,,,18
+327,Isla El Gallo,-2.2302,-79.8341,,,,,,12
+328,Isla Puna - camaronera COTURCOR,-2.86143,-80.0745,,,,,,12
+329,Isla Puna - PESCAYO,-2.81059,-80,,,,,,12
+330,Isla Santay,-2.22622,-79868,,,,,,12
+331,Isla Santay - estero Huaquillas,-2.22952,-79866,,,,,,12
+332,Isla Santay - norte,-2.1983,-79845,,,,,,12
+333,Isla Santay-Sur,-2.25299,-79.8452,,,,,,12
+334,Isla Silva,-1.95,-79.73333,,,,,,12
+335,Islamar,-1.60134,-80.8523,,,,,,18
+336,ITSAE-CADE,-0.46529,-79.3175,,,,,,23
+337,Jama,-0.15,-80.2,Tito Santos,,520,0,Bosque humedo de garua/Bosque seco semidesiduo/Matorral seco,18
+338,Jardin Botanico Reinaldo Espinosa,-4.09304,-79.2107,,,,,,16
+339,Jauneche - EBPFD,-1.24211,-79.66,,,,,,17
+340,Jipijapa,-1.333333333,-80.65,Cerro Achi,600,,,,18
+341,Jipijapa,-1.35261,-80.5849,,,,,,18
+342,Jorupe - 4 22 36 : 79 54 10,-4.37639,-79.9028,,,,,,16
+343,Jorupe Reserve,-4.37945,-79.9205,,,,,,16
+344,Jorupe Reserve - -4.371894 - -79.900334,-4.37189,-79.9003,,,,,,16
+345,Jorupe to Tapichalaca - 4 12 17 : 79 20 18,-4.20472,-79.3383,,,,,,16
+346,Jose Joaquin de Olmedo International Airport,-2.15436,-79.8816,,,,,,12
+347,Junta Usuarios Chilintomo,-1.94813,-79.4703,,,,,,12
+348,km 35 in Santo Domingo-Quininde Rd.,-0.9375,-79.32142,,,,,,20
+349,km 35 Santo Domingo-Quininde Rd.,-0.9375,-79.32142,,,,,,20
+350,La Ceiba,9524500,569190,,,,,,16
+351,La Colmena,-6.47374,-79.8544,,,,,,14
+352,LA ISLILLA,-5.2089,-81.1814,,,,,,21
+353,La Libertad,-2.266666667,-80.88333333,Reserva Velazco Ibarra,,6,0,Bosque desiduo/Matorral seco,22
+354,La Libertad - 2 road km SW Otuzco - 2450 m,-7.91796,-78.5682,,,,,,13
+355,La Libertad area (many stops),-2.25492,-80.8805,,,,,,22
+356,La Libertad--turnoff for El Porvenir to Pacanguilla,-7.16358,-79.4415,,,,,,13
+357,La Palma,-1.58726,-80.00256,,,,,,12
+358,La Revesa - Palenque,-1.44129,-79.7481,,,,,,17
+359,La Segua Marshes (Chone Lakes)--general area,-0.70318,-80.2014,,,,,,18
+360,La Segua Wetland Reserve - Ecuador,-0.70325,-80.2001,,,,,,18
+361,La Troncal,-2.47434,-79.2925,,,,,,5
+362,La Vinia Reservoir,-6.38992,-79.7572,,,,,,14
+363,La Vinia Reservoir,-6.38992,-79.7572,,,,,,14
+364,Laguna niapique,-5.52696,-80.7039,,,,,,21
+365,Laguna de niapique,-5.53116,-80.7035,,,,,,21
+366,Laguna los Patos - Sullana-Piura,-4.78381,-80.6062,,,,,,21
+367,Laguna los Patos. Sullana-Piura,-4.77931,-80.6008,,,,,,21
+368,laguna santa julia y alrededores,-5.20328,-80.6639,,,,,,21
+369,Lambayeque,-6.908333333,-79.88611111,Eten,,15,0,Humedal,14
+370,Lambayeque - Gustavo del Solar hacienda,-5.89857,-79.7892,,,,,,14
+371,Lambayeque - hotel Mama Helmita??s garden,-6.69833,-79.8957,,,,,,14
+372,Lambayeque - Reservorio de Tinajones  ~200 masl,-6.6559,-79.4593,,,,,,14
+373,Lambayeque - Reservorio de Tinajones (~200 masl),-6.6559,-79.4593,,,,,,14
+374,Lambayeque fields,-6.73655,-79.8826,,,,,,14
+375,Laquipampa,-6.35147,-79.4559,,,,,,14
+376,Las Peniitas - Las Lomas - Piuras,-4.68851,-80.1622,,,,,,21
+377,Las Tunas,-1.57038,-80.8235,,,,,,18
+378,Limon pueblo,-5.69478,-79747,,,,,,21
+379,Limones,9523605.86,578402.15,,,,,,16
+380,Lloma Alta Ecological Reserve,-1.84255,-80.6051,,,,,,22
+381,Lobitos - Talara,-4.44841,-81.2754,,,,,,21
+382,Loja dump - 3 58 23 : 79 19 39,-3.97306,-79.3275,,,,,,16
+383,Loma de Teodomiro -Presa Derivadora,-4.89792,-80.7063,,,,,,21
+384,Los Frailes - -1.494348 - -80.792273,-1.49435,-80.7923,,,,,,18
+385,Los Frailes - PN Machalilla,-1.48642,-80.7911,,,,,,18
+386,Los Pilares,-4.22222,-80.8411,,,,,,21
+387,Lowlands east of Guayaquil (along E25),-2.30654,-79.6381,,,,,,12
+388,Macara,-4.267788889,-80.08763611,Hacienda Jujal,,900,300,,16
+389,Macara--vicinity,-4.37106,-79.9393,,,,,,16
+390,Macara-Zozorango,-4.38316,-79.8194,,,,,,16
+391,Machala,-3.27215,-79.9503,,,,,,8
+392,Machalilla,-1.266666667,-81.06666667,Isla de la Plata,,167,0,Matorral desertico tropical y monte espinoso,18
+393,Machalilla N.P.,-1.54252,-80.7034,,,,,,18
+394,Machalilla NP--Near Puerto Lopez,-1.52383,-80.7708,,,,,,18
+395,Malacatos-Gonzanama Rd.--Purunuma,-4.20662,-79.3601,,,,,,16
+396,Malecon Guayaquil,-2.18862,-79896,,,,,,12
+397,mancora,-4.10909,-81.0638,,,,,,21
+398,Mancora - beach,-4.12674,-81.0948,,,,,,21
+399,Mancora area,-4.11907,-81.0637,,,,,,21
+400,Manglares Churute,-2.45519,-79.6424,,,,,,12
+401,Manglares Churute - -2.426999 - -79.622264,-2427,-79.6223,,,,,,12
+402,Manglares de San Pedro de Vice,-5.52424,-80.8909,,,,,,21
+403,Manglares-Churute--general area,-2.48677,-79.6116,,,,,,12
+404,Manglares-Churute--Trails and boardwalk near visitor's center,-2.4247,-79661,,,,,,12
+405,Manta,-1.00666,-80.7111,,,,,,18
+406,Mantaraya,-1.57205,-80.8296,,,,,,18
+407,Mantaraya Lodge,-1.57151,-80.8302,,,,,,18
+408,Marshes north of Guayaquil,-2.14844,-79.7683,,,,,,12
+409,Membrillar,-7.716666667,-78.71666667,Llaguen,,2900,2400,Bosque seco de neblina,13
+410,Mi Casa,-6.78467,-79.8444,,,,,,14
+411,Milagro - UAE,-2.12839,-79.5794,,,,,,12
+412,Mocache,-1.21602,-79.5177,,,,,,17
+413,Mocupe,-7.0457,-79.62,,,,,,14
+414,Monsefu Fields,-6.89268,-79.9003,,,,,,14
+415,Montalvo,-1.38706,-80.5506,,,,,,18
+416,Montanita,-1.83509,-80.7504,,,,,,22
+417,Montechristi,-1.03987,-80.6628,,,,,,18
+418,Moro Moro,-3.68183,-79742,,,,,,8
+419,Motupe,-6.1,-79.43333333,Chiniama,,3100,2500,Bosque nublado seco (rodeado de arbustos),14
+420,mouth of Estuario de Virrila. 24 km S. 5 km W Sechura,-5.77008,-80.86541,,,,,,21
+421,Naranjal,-2.48,-79.72,Manglares Churute,,700,30,Manglar/Bosque seco/ Bosque semidesiduo/Bosque humedo,12
+422,Near Puerto Inca (Jesus Maria),-2.54385,-79.5265,,,,,,12
+423,North of Salinas,-2.16479,-80.8139,,,,,,22
+424,Old Road to Vilcabamba--Yangana,-4399,-79.1582,,,,,,16
+425,Olmos,-5.8,-79.68333333,Huarmaca Olmos,,1200,150,Bosque seco,15
+426,Olmos,-5.99375,-79.7436,,,,,,14
+427,Olmos area--swamp north,-5.87472,-79.7821,,,,,,14
+428,Olmos marsh - 8 km west of town,-5.94185,-79.7601,,,,,,14
+429,Olmos-Jaen Rd.--roadside overlook,-5.91738,-79.5362,,,,,,21
+430,Olmos-Jaen Rd.--roadside stream,-5.90181,-79.5323,,,,,,21
+431,On E92,-3.63177,-79.8863,,,,,,8
+432,Outside of Ancon - -2.329672 - -80.836288,-2.32967,-80.8363,,,,,,22
+433,Oyotun,-6.8,-79.06666667,Alto Sania,,2600,1800,Bosque humedo,4
+434,Oyotun,-6.833333333,-79.26666667,Las Delicias,,320,270,Desierto rocoso de cactaceas,14
+435,Pacoa Salt Flats,-2.08225,-80.7374,,,,,,22
+436,Palestina,-1.42533,-79.9218,,,,,,12
+437,Palestina - Ecuador,-1.29593,-79.8465,,,,,,12
+438,Paltas,-3.21649,-79183,,,,,,2
+439,Pampa del Aterrizaje,-4.52799,-79.9828,,,,,,21
+440,Panamericana Norte - Eten to Mocupe,-6.92779,-79.7424,,,,,,14
+441,Panamericana Norte--Puente Internacional,-4.39301,-79.9646,,,,,,21
+442,Parachique,-5.67371,-80.8408,,,,,,21
+443,Parenas. 7 km N. 15 km E Talara,-4.53333,-81.15,,,,,,21
+444,Parinas. 7 km N and 12 km E Talara,-4.53333,-81.15,,,,,,21
+445,Parinas. 7 km N and 15 km E Talara,-4.53333,-81.15,,,,,,21
+446,Parque Ecol??gico Kurt Beer--Humedal de Santa Julia,-5.20413,-80.6641,,,,,,21
+447,Parque Ecologico Kurt Beer--Humedal de Santa Julia,-5.20413,-80.6641,,,,,,21
+448,Parque Lago Chongon,-2.23337,-80.1276,,,,,,12
+449,Parque Nacional Cerro de Amotape,-3718,-80.4075,,,,,,24
+450,Parque Nacional Machalilla,-1.5286,-80.7954,,,,,,18
+451,Parque Nacional Machalilla -- Punta Los Frailes,-1.4824,-80.7902,,,,,,18
+452,Parque Nacional Yacuri--paramo zone above 3200 m,-4.73586,-79.4283,,,,,,16
+453,Patricia Pilar,-0.583333333,-79.36666667,Rio Palenque,,170,100,,17
+454,PE-8--east of Limoncarro,-7.31528,-79.3796,,,,,,13
+455,PE-8--Pearl Kite spot,-7.26723,-79.2611,,,,,,4
+456,PE-Cajamarca Region - -7.1795x-79.0152 - Jun 12 - 2013 - 8:49 PM,-7.17948,-79.0152,,,,,,4
+457,PE-Cajamarca Region - -7.2510x-78.4675 - Jun 13 - 2013 - 7:50 PM,-7.25102,-78.4675,,,,,,4
+458,PE-Cajamarca Region - -7.2547x-78.4824 - Jun 13 - 2013 - 7:52 PM,-7.25471,-78.4824,,,,,,4
+459,PE-Cajamarca Region - -7.2552x-78.4728 - Jun 13 - 2013 - 7:53 PM,-7.25522,-78.4728,,,,,,4
+460,PE-Cajamarca Region - -7.2704x-78.5187 - Jun 12 - 2013 - 8:54 PM,-7.27041,-78.5187,,,,,,4
+461,PE-Cajamarca Region - -7.2875x-78.5118 - Jun 12 - 2013 - 8:53 PM,-7.28754,-78.5118,,,,,,4
+462,Pedernales,0.033333333,-79.98333333,Cerro pata de pajaro,,850,300,Bosque muy humedo subtropical de la costa,18
+463,Pedernales mangroves - Ecuador,0.05746,-80.0639,,,,,,18
+464,PE-Lambayeque Region - -6.3580x-79.4432 - Jun 11 - 2013 - 9:49 PM,-6.35801,-79.4432,,,,,,14
+465,PE-Lambayeque Region - -6.3809x-79.4749 - Jun 11 - 2013 - 9:47 PM,-6.38089,-79.4749,,,,,,14
+466,PE-Lambayeque Region - -6.4037x-79.4982 - Jun 11 - 2013 - 9:45 PM,-6.40365,-79.4982,,,,,,14
+467,PE-Lambayeque Region - -6.4040x-79.5037 - Jun 11 - 2013 - 9:55 PM,-6.40397,-79.5037,,,,,,14
+468,PE-Lambayeque Region - -6.4190x-79.5640 - Jun 11 - 2013 - 9:43 PM,-6.41902,-79564,,,,,,14
+469,PE-Lambayeque Region - -6.4275x-79.5840 - Jun 11 - 2013 - 9:58 PM,-6.42748,-79584,,,,,,14
+470,PE-Lambayeque Region - -6.4361x-79.5952 - Jun 11 - 2013 - 9:41 PM,-6.43609,-79.5952,,,,,,14
+471,PE-Lambayeque Region - -6.4652x-79.6241 - Jun 11 - 2013 - 9:40 PM,-6.4652,-79.6241,,,,,,14
+472,PE-Lambayeque Region - -6.4754x-79.8002 - Jun 11 - 2013 - 10:03 PM,-6.47541,-79.8002,,,,,,14
+473,PE-Lambayeque Region - -6.4838x-79.6798 - Jun 11 - 2013 - 9:37 PM,-6.48378,-79.6798,,,,,,14
+474,PE-Lambayeque Region-Chiclayo - -6.7716x-79.8466 - Jun 11 - 2013 - 4:49 AM,-6.77161,-79.8466,,,,,,14
+475,PE-Lambayeque Region-Ciudad Eten - -6.8995x-79.8671 - Jun 12 - 2013 - 8:44 PM,-6.89955,-79.8671,,,,,,14
+476,PE-Lambayeque Region-Ciudad Eten - -6.9233x-79.8664 - Jun 12 - 2013 - 8:41 PM,-6.92334,-79.8664,,,,,,14
+477,PE-Lambayeque Region-Jayanca - -6.4720x-79.8162 - Jun 11 - 2013 - 10:05 PM,-6472,-79.8163,,,,,,14
+478,PE-Lambayeque Region-Jayanca - -6.4800x-79.8563 - Jun 11 - 2013 - 10:08 PM,-6.47997,-79.8563,,,,,,14
+479,PE-Lambayeque Region-Monsef?? - -6.8828x-79.8856 - Jun 12 - 2013 - 8:45 PM,-6.88277,-79.8856,,,,,,14
+480,PE-Lambayeque Region-Santa Rosa - -6.8846x-79.9201 - Jun 12 - 2013 - 8:47 PM,-6.8846,-79.9201,,,,,,14
+481,PE-Lambayeque Region-T??cume - -6.5123x-79.8480 - Jun 11 - 2013 - 10:07 PM,-6.51229,-79848,,,,,,14
+482,Peru  Chiclayo Hotel,-6.77172,-79.8462,,,,,,14
+483,Peru - E of Tuman,-6.74041,-79676,,,,,,14
+484,Peru - La Vina - Cerro,-6.3821,-79.7116,,,,,,14
+485,Peru - La Vina - Represa,-6.4134,-79.7745,,,,,,14
+486,Peru - Lambayeque - Lagunas/Chepito,-6.55067,-79.9398,,,,,,14
+487,Peru - Olmos - Trail on the side of the PAH up to cell tower,-6.02497,-79.7272,,,,,,14
+488,Peru - Olmos to Abra Porculla (multiple stops),-5.92111,-79.5366,,,,,,21
+489,Peru - Pacora - Huaca Bandera,-6.4332,-79872,,,,,,14
+490,Peru - Pacora - Motupe River crossing,-6412,-79.8923,,,,,,14
+491,Peru - Salas - Algorrobo - First Valley on right,-6.21822,-79.5718,,,,,,14
+492,Peru - Salas - Road from Algorrobo to Sauce,-6.25242,-79.5652,,,,,,14
+493,Peru - Salas - Sauce Cerros,-6.26801,-79.3427,,,,,,14
+494,Peru - Tumbes - Punta Sal area,-4.00094,-80.9643,,,,,,24
+495,Peru - W Chongoyape,-6.63036,-79.4037,,,,,,14
+496,Peru along Progresso rd,-6486,-79.7329,,,,,,14
+497,Peru outside Chiclayo random stop,-6.55956,-79.7737,,,,,,14
+498,Pile - cerros de,-1.16604,-80.8382,,,,,,18
+499,Pimental beach,-6.84462,-79.9386,,,,,,14
+500,Pimentel,-6.84746,-79.9374,,,,,,14
+501,Pinas,-3.68073,-79.6811,,,,,,8
+502,PInas - Portete,-3.7017,-79.6578,,,,,,8
+503,Pinias,-3.6841,-79.6773,,,,,,8
+504,Pinias,-3.66,-79771,Buenaventura,,1150,500,,8
+505,Piura,-5.193333333,-80.63305556,Piura-Castilla,,29,25,Desierto superarido premontano tropical,21
+506,Piura - Aeropuerto,-5.20062,-80.6146,,,,,,21
+507,Piura - between Sullana and Piura,-4.78721,-80.6094,,,,,,21
+508,Piura - El Alto area,-4.30088,-81.1708,,,,,,21
+509,Piura - Fundo Montelima,-4.81971,-80.9116,,,,,,21
+510,Piura - Peru,-5.19353,-80.6204,,,,,,21
+511,Piura - Sullana area,-4.88881,-80.6994,,,,,,21
+512,Piura footbridge,-5.18816,-80.6243,,,,,,21
+513,Piura--drive to shorebird workshop,-5.31053,-80.7055,,,,,,21
+514,Piura--river and office,-5.18513,-80.6241,,,,,,21
+515,Piura--Universidad National de Piura,-5.17983,-80.6201,,,,,,21
+516,Playa Cabo Blanco,-4.25079,-81.2339,,,,,,21
+517,Playa Malabrigo,-7.72435,-79.4587,,,,,,13
+518,PN Machalilla,-1.266666667,-81.06666667,Isla de la plata,,167,0,,18
+519,PN Machalilla (Las Goteras),-1.54606,-80.7804,,,,,,18
+520,PN Podocarpus--Cajanuma,-4.11671,-79.1738,,,,,,16
+521,PN Podocarpus--Cordillera de Sabanilla,-4.44687,-79.1474,,,,,,25
+522,Progreso,-2.116666667,-80.3,Chongon Colonche,,770,50,Bosque humedo tropical/Bosque seco desiduo,12
+523,Pucara,-5.92791,-79.5513,,,,,,21
+524,pueblo viejo,-1.4116,-79.5039,,,,,,17
+525,Puebloviejo,-1.55065,-79.53402,,,,,,17
+526,Puente Huana Huana,-7.27633,-78.6034,,,,,,4
+527,Puente Rio Roque,-6.85415,-79.8261,,,,,,14
+528,Puente Viejo,-4.89204,-80.6945,,,,,,21
+529,Puerto Bolivar,-3.27041,-80.0033,,,,,,8
+530,Puerto Bolivar and lowlands to Buenaventura,-3.25706,-79.9983,,,,,,8
+531,Puerto Conguillo,-0.92557,-79.7494,,,,,,18
+532,Puerto Eten--coastal lagoons,-6.9073,-79.8923,,,,,,14
+533,Puerto Eten--Playa,-6.94734,-79.8664,,,,,,14
+534,Puerto Hondo - -2.192509 - -80.024307,-2.19251,-80.0243,,,,,,12
+535,Puerto Hondo Mangrove swamps,-2.21144,-80054,,,,,,12
+536,Puerto Hondo--mangrove swamps,-2.19244,-80.0242,,,,,,12
+537,Puerto Inca,-2543,-79.5416,,,,,,12
+538,Puerto Inca - 2 32 16 : 79 32 56,-2.53778,-79.5489,,,,,,12
+539,Puerto Jeli,-3.40745,-80.0041,,,,,,8
+540,Puerto L??pez,-1.55737,-80.8128,,,,,,18
+541,Puerto Lopez,-1.5625,-80.83,Machalilla,,860,0,Desde matorrales aridos hasta bosque seco tropical. ,18
+542,Puerto Pizarro - Peru,-3.49697,-80.3732,,,,,,24
+543,Puerto Pizarro to Playa Afuera,-3.49457,-80.4271,,,,,,24
+544,Puerto Pizzaro  pueblo,-3.50093,-80.3899,,,,,,24
+545,Puerto Pizzaro (pueblo),-3.50093,-80.3899,,,,,,24
+546,Puerto Portovelo Ponds (Isla Corazon) - Ecuador,-0.64119,-80.3691,,,,,,18
+547,Puerto Rico - Colimes,-1.54554,-79.9966,,,,,,12
+548,Pull off on road to San Pablo,-7.1779,-78.8223,,,,,,4
+549,Punta Balcones--Playa del Rio,-4.66932,-81.3225,,,,,,21
+550,Punta Tric Trac. 2 km E Bayorar,-5.83333,-81.01667,,,,,,21
+551,Puyango,-3.96,-80.16,La Tagua,,1400,350,Bosque humedo/Bosque seco,16
+552,Puyango,-3.883333333,-80.08333333,Puyango,,500,300,Bosque caducifolio maduro,9
+553,Quayaquil Airport,-2.15803,-79.8839,,,,,,12
+554,Quebrada 137,-3.8719,-80.8192,,,,,,24
+555,Quebrada Caracucho,-5.11571,-79.9254,,,,,,21
+556,Quebrada Charan,-3.65134,-80605,,,,,,24
+557,Quebrada de San Antonio,-4.5215,-79.9914,,,,,,21
+558,Quebrada de Suyo,-4.51268,-79.9991,,,,,,21
+559,Quebrada El Lim??n  Valqui E4.2,-5.70228,-79.7324,,,,,,21
+560,Quebrada El Lim??n (Valqui E4.2),-5.70228,-79.7324,,,,,,21
+561,Quebrada Faical - E El Caucho,-3.81667,-80.2833,,,,,,24
+562,Quebrada Frejalillo to Olmos,-6.08185,-79.6344,,,,,,14
+563,Quebrada Huabal camp,-4.23917,-80.7447,,,,,,21
+564,Quebrada Lim??n--start of trail,-5.69584,-79.7439,,,,,,21
+565,Quebrada Madre de Agua camp,-4.18528,-80.8228,,,,,,21
+566,Quebrada Suqinda - Sozoranga,-4.32302,-79.7985,,,,,,16
+567,Quevedo. Puente Sur,-1.04065,-79.4654,,,,,,17
+568,Refugio de Vida Silvestre Laquipampa,-6.34024,-79466,,,,,,14
+569,Represa de Gallito Ciego - roadside desert scrub,-7.22036,-79.1819,,,,,,4
+570,Represa El Azucar - Santa Elena - Ecuador,-2.23738,-80565,,,,,,22
+571,Represa Gallito Ciego,-7.22329,-79.1793,,,,,,4
+572,Represa Gallito Ciego--rio to east,-7.25539,-79.1168,,,,,,4
+573,Represa La Vinia,-6.39088,-79.7565,,,,,,14
+574,Represa La Vinia,-6.39088,-79.7565,,,,,,14
+575,Reserva Biol??gica Tito Santos,-0.15175,-80.1996,,,,,,18
+576,Reserva Buenaventura--old road between lodge and shrine,-3.64855,-79.7517,,,,,,8
+577,Reserva Buenaventura--Umbrellabird Lodge and lower road,-3.65395,-79768,,,,,,8
+578,Reserva Cerro Blanco,-2.18293,-80.0186,,,,,,12
+579,Reserva Churute - laguna El Cancl??n,-2.43496,-79.6064,,,,,,12
+580,Reserva Churute_Descarga bypass,-2.43376,-79.7164,,,,,,12
+581,Reserva Huashapamba and Acanama area,-3.66491,-79.2631,,,,,,16
+582,Reserva Jorupe,-4.36667,-79.9,,,,,,16
+583,Reserva Natural El Tundo - Sozoranga,-4.33261,-79.8054,,,,,,16
+584,Reserva Natural La Ceiba - Cabeza de Toro,4272,80329,,,,,,16
+585,Reserva Utuana,-4.36708,-79.7176,,,,,,16
+586,Reserva Yunguilla,-3.18308,-79.2799,,,,,,2
+587,Reservorio de Tinajones,-6.63037,-79.4481,,,,,,14
+588,Reservorio La Vinia,-6.39127,-79.7537,,,,,,14
+589,Ribera del rio Chira,-4.89105,-80.6953,,,,,,21
+590,Rio Arenal en Baba,-1.7922,-79.6636,,,,,,17
+591,Rio Ayampe,-1.67569,-80.8065,,,,,,12
+592,Rio Ayampe - -1.675219 - -80.803522,-1.67522,-80.8035,,,,,,18
+593,Rio Bulu Bulu - Fatima,-2.25848,-79.6452,,,,,,12
+594,Rio Chimbo - via a Milagro,-2.18446,-79.62,,,,,,12
+595,Rio Chimbo en Marcelino Mariduenia,-2.20461,-79.4284,,,,,,12
+596,Rio Chira--Manglares,-4.88928,-81.1479,,,,,,21
+597,Rio Colimes - Colimes,-1.54047,-80.0102,,,,,,12
+598,Rio Colimes-Colimes,-1.53876,-80.0242,,,,,,12
+599,Rio Daule - norte de Balzar,-1.33969,-79.8867,,,,,,12
+600,Rio de Olmos. Olmos 5 km N and 14 km E,-5.90479,-79.82356,,,,,,14
+601,Rio de Olmos. Olmos 5 km N and 20 km E,-5.90479,-79.76937,,,,,,14
+602,Rio Jequetepeque--Desembocadura,-7.33667,-79589,,,,,,13
+603,Rio La Morena - 5 km al este,-0.34023,-79.7524,,,,,,18
+604,Rio Palenque,-0.57334,-79.3591,,,,,,23
+605,Rio Palenque Research Station,-0.58881,-79.3636,,,,,,17
+606,Rio Pimocha. 10 km SW Babahoyo,-1.83332,-79.60645,,,,,,17
+607,Rio Piura--Desembocadura,-5.59011,-80.8656,,,,,,21
+608,Rio San Antonio,-1.91667,-79.83333,,,,,,12
+609,Rio Santa Rosa - El Vado,-3.55872,-79946,,,,,,8
+610,Rio Santa Rosa 630 m,-3.58592,-79.8009,,,,,,8
+611,rio seco,-5.22225,-80.8717,,,,,,21
+612,Rio Tulipe,-2.17647,-79.72851,,,,,,12
+613,Rio Vinces en Samborond??n,-1.93211,-79.7195,,,,,,12
+614,Rio Zania--Desembocadura,-7.08488,-79.7175,,,,,,14
+615,RN de Tumbes--El Caucho Biological Station,-3.7793,-80.2922,,,,,,24
+616,road between Manglares Churute and guayaquil,-2.33756,-79.6358,,,,,,12
+617,Road between Montanita and Puerto Lopez,-1.60064,-80.8455,,,,,,18
+618,Road between Pomac and Laquipampa,-6.48043,-79.6493,,,,,,14
+619,Road between Puerto Lopez and Jipijapa,-1.34838,-80.6545,,,,,,18
+620,Road between San Vicente and Montanita,-1.94832,-80.7266,,,,,,22
+621,Road out of Guayaquil - -2.198793 - -79.777438,-2.19879,-79.7774,,,,,,12
+622,Road to Bajo Alto - -3.126682 - -79.863823,-3.12668,-79.8638,,,,,,8
+623,Road to Bajo Alto - -3.130898 - -79.857649,-3.1309,-79.8577,,,,,,8
+624,Road to Buena Ventura - -3.651623 - -79.788672,-3.65162,-79.7887,,,,,,8
+625,road to El Palmo,-7.03445,-79.6758,,,,,,14
+626,Road to Porcullo Pass,-5.95197,-79.6421,,,,,,14
+627,Road to San Pablo - -2.082197 - -80.737661,-2.0822,-80.7377,,,,,,22
+628,Road to Utuana - -4.338152 - -79.770723,-4.33815,-79.7707,,,,,,16
+629,Road to Utuana - -4.347648 - -79.787342,-4.34765,-79.7873,,,,,,16
+630,roadside birding,-4.3285,-79.6708,,,,,,16
+631,Roadside Near Yangana,-4.41092,-79.1608,,,,,,16
+632,roadside stop at 1300masl,-4.35463,-79.8076,,,,,,16
+633,Rte 25 South of Mercedes - 2 2 51 : 79 37 32,-2.04474,-79.6323,,,,,,12
+634,Ruta tren Duran- Yaguachi,-2.12102,-79.7172,,,,,,12
+635,S Antonio between Playas and Progresso,-2.5333,-80.0167,,,,,,12
+636,Sabiango,-4.36713,-79.8133,,,,,,16
+637,Sabiango - -4.365672 - -79.812995,-4.36567,-79813,,,,,,16
+638,Salas,-6.35,-79.4945,Laquipamba,,2550,2000,Bosque seco/Matorral desertico,11
+639,Salinas,-2.22,-80.97,Lagunas de Ecuasal,,10,0,Matorral seco,22
+640,Salinas,-6.49101,-79.7965,,,,,,14
+641,Salinas - Bosque de Pomac,-6491,-79.7961,,,,,,14
+642,Salinas--General area,-2.22308,-80.9589,,,,,,22
+643,Salinas--La Chocolatera,-2.18954,-81.0111,,,,,,22
+644,Salinas--Lagunas de Ecuasal,-2.24606,-80.9417,,,,,,22
+645,San Ignacio,-4.02713,-79.79637,,,,,,16
+646,San Jacinto,-1.62171,-79.9957,,,,,,12
+647,San Jose - Malacatos,-4.21006,-79.2383,,,,,,16
+648,San Jose de Bilsa,0.616666667,-79.85,Cabeceras de Bilsa,,300,100,Cloud forest,10
+649,San Jose del Moro,-7.18139,-79437,,,,,,13
+650,San Lorenzo - Pacoche,-1.12295,-80.8856,,,,,,18
+651,San Martin,-3.13588,-79.20946,,,,,,2
+652,san mateoo,-976,-80.7061,,,,,,18
+653,San Pablo,-2.14445,-80.7759,,,,,,22
+654,San Pablo -- beach,-2.1437,-80.7752,,,,,,22
+655,San Pablo estuary,-2.13883,-80774,,,,,,22
+656,San Pedro de la Bendita Road,-3.94483,-79.4225,,,,,,16
+657,San Vicente--road southeast from town,-0.60647,-80.3936,,,,,,18
+658,San Vicente--waterfront,-0.59824,-80.4067,,,,,,18
+659,Sangal - 0.5 km NW - humid scrub,-7.13494,-78.8476,,,,,,4
+660,Santa Ana,-1.20515,-80.3681,,,,,,18
+661,Santa Elena - Punta Carnero,-2.28903,-80.9117,,,,,,22
+662,Santa Elena Peninsula,-2.22536,-80.9628,,,,,,22
+663,Santa Elena: Montaniita,-1.82838,-80.7516,,,,,,22
+664,Santa Elena: Rio Ayampe,-1.68322,-80.7358,,,,,,22
+665,Santa Rosa,-3.5006,-79.9674,,,,,,8
+666,Santa Rosa--shrimp ponds,-3.42307,-79.9585,,,,,,8
+667,Santa Rosa--vicinity,-3.44947,-79.9611,,,,,,8
+668,Santo Domingo,-5.1,-79.88333333,Paltashaco,910,,,Bosque montano seco,7
+669,Santuario Historico Bosque de P??mac,-6.48778,-79.7647,,,,,,14
+670,Santuario Historico Bosque de P??mac--Batan Grande,-6.46679,-79.78,,,,,,14
+671,Saraguro,-3.62191,-79238,,,,,,16
+672,Saraguro - Loja - Ecuador,-3.62179,-79.2379,,,,,,16
+673,SE Celica. along Rio Catamayo,-4.16667,-79.86667,,,,,,16
+674,SE foot Cerro Amotope. 10 km N. 40 km W Sullana,-4.7929,-81.04396,,,,,,21
+675,SE foot Cerro Amotope. 13 km N. 35 km W Sullana,-4.76577,-80.99888,,,,,,21
+676,Sechura,-5.5,-80.88333333,San Pedro Vice,,10,0,Manglar austral de la costa pacifica,21
+677,Segua Marsh - -0.705072 - -80.087275,-0.70507,-80.0873,,,,,,18
+678,Segua Marsh - -0.706673 - -80.106836,-0.70667,-80.1068,,,,,,18
+679,Side Road 9 km S of Olmos,-6.02215,-79685,,,,,,14
+680,Side road downhill from highway,-7.27667,-78.6031,,,,,,4
+681,Sinsicap  Valqui E6.2,-7.85072,-78.7453,,,,,,13
+682,Sinsicap (pueblo),-7.85133,-78754,,,,,,13
+683,Sinsicap (Valqui E6.2),-7.85072,-78.7453,,,,,,13
+684,South of Pimentel,-6.85202,-79.9365,,,,,,14
+685,south of Velacruz,-4.02914,-79.6219,,,,,,16
+686,Sozoranga,-4.312011111,-79.80385,El tundo,,2100,1400,,16
+687,Sozoranga--El Tundo Reserve,-4.32024,-79.8142,,,,,,16
+688,Sozoranga--vicinity  Zozoranga,-4.33263,-79.7904,,,,,,16
+689,Sozoranga--vicinity (Zozoranga),-4.33263,-79.7904,,,,,,16
+690,Subida Alta - Isla Puna,-2.82971,-80.2532,,,,,,12
+691,Sucre-Engunga Road,-2.38346,-80.5027,,,,,,22
+692,Sullana,-4.85856,-80.7595,,,,,,21
+693,Sullana-Tarala,-4.3,-80.8,Coto de caza El Angolo,,1600,650,Bosque caducifolio tropical/Bosque de galeria/Matorral riberenio/Humedales,21
+694,Suyo,-4.5,-80,La tina,,1400,400,Bosque seco ecuatorial/Bosque humedo con ceibos,21
+695,Switchbacks up to Cajamarca,-7.25424,-78.4805,,,,,,4
+696,T??cume,-6.51322,-79.8476,,,,,,14
+697,talandracas,-5.11189,-80.0602,,,,,,21
+698,Tapichalaca - 4 25 53 : 79 8 56,-4.43139,-79.1489,,,,,,25
+699,TEMBLADIRA,-7.26667,-79.15,,,,,,4
+700,Tinajilla Pass,-3.18936,-79.0241,,,,,,2
+701,Tinas,-3.62895,-79.88235,,,,,,8
+702,Tocto-Las Juntas,-5.77778,-79.6897,,,,,,21
+703,Torata,-3.59155,-79.8899,,,,,,8
+704,Tosagua,-0.77902,-80.2501,,,,,,18
+705,Trail above Laquipampa,-6.30062,-79.4576,,,,,,14
+706,Tric Trac. 2 km E Bayovar,-5.83333,-81.01667,,,,,,21
+707,Tucume,-6.51727,-79.8438,,,,,,14
+708,Tucume & Pomac,-6.51454,-79.8322,,,,,,14
+709,Tumbes,-4.066666667,-80.58333333,Cerro de Amotape,,1150,70,,21
+710,Tumbes - Rio Piojo area,-3.58834,-80477,,,,,,24
+711,Tumbes - small lagoons and sea - Punta Pico area,-3.74907,-80.7836,,,,,,24
+712,Tumbes river - first part,-3.55334,-80.4725,,,,,,24
+713,Tumbes town,-3.57159,-80.4622,,,,,,24
+714,Urbanizaci??n Portal al Sol,-2.1795,-79.9832,,,,,,12
+715,Utuana,-4.366666667,-79.75,Bosque de Hanne,,2650,1400,Bosque nublado ,16
+716,Utuana - 4 21 27 : 79 43 12,-4.36336,-79.7201,,,,,,16
+717,Utuana - 4 22 1 : 79 43 3,-4.36694,-79.7175,,,,,,16
+718,Utuana - -4.367386 - -79.724819,-4.36739,-79.7248,,,,,,16
+719,Utuana Reserve,-4.36301,-79.7001,,,,,,16
+720,Valdiva Ecolodge and vicinity,-1.95759,-80.7297,,,,,,22
+721,Valle de Yunguilla,-3.3,-79.3,,,,,,2
+722,Vilcabamba - -4.261152 - -79.219983,-4.26115,-79.22,,,,,,16
+723,Vilcabamba--vicinity,-4.26664,-79.2262,,,,,,16
+724,Vinces,-1.333333333,-79.58333333,CS. Pedro Franco Davila,,80,70,Bosque desiduo tropical secundario,17
+725,Virrila Estuary. 35 km S Sechura,-5.78333,-80.86667,,,,,,21
+726,Virrila Estuary. 35 km SSE Sechura,-5.78333,-80.86667,,,,,,21
+727,wood stork roost,-3.4204,-79.9535,,,,,,8
+728,Yaguachi en paso lateral,-2.08642,-79.7013,,,,,,12
+729,Yanaurco,-3.49179,-79.08598,,,,,,2
+730,Yangana - 4 20 47 : 79 11 21,-4.34639,-79.1892,,,,,,16
+731,Yangana - 4 21 57 : 79 10 29,-4.36583,-79.1747,,,,,,16
+732,Yonan--puente,-7.31528,-79.3796,,,,,,13
+733,Zania,-7.016666667,-79.68333333,Rafan,,10,0,Matorral riverinio,14
+734,Zapotal,-2.333333333,-80.55,Engunga,,500,50,Bosque desiduo/Matorral seco,22
+735,Zapotillo,-4.25,-80.31666667,La Ceiba,,450,200,Bosque desiduo de tierras bajas de la Costa,16
+736,Zapotillo,-4.272604985,-80.31454903,La Ceiba,297,,,,16
+737,Zapotillo,-4.276650008,-80.31739804,La Ceiba,293,,,,16
+738,Zapotillo,-4.326305995,-80.22610797,,294,,,,16
+739,Zapotillo,-4.320263984,-80.22476099,,256,,,,16
+740,Zaruma,-3.68945,-79.6136,,,,,,8
+741,Zaruma toward Los Rosales de Machay,-3.55458,-79.6486,,,,,,8
+742,Zozaranga - 4 19 57 : 79 46 57,-4.3325,-79.7825,,,,,,16
+743,Zozaranga - 4 23 35 : 70 50 35,-4.39306,-79.8431,,,,,,16
+744,,-4.329388021,-80224,Cabeza de toro,271,,,,16
+745,,-4.328536,-80.22160898,Cabeza de toro,261,,,,16
+746,,-4.6,-81.11666667,Talara,,200,50,Bosque seco,21

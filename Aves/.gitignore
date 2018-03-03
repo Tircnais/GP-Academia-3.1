@@ -7,9 +7,9 @@ venv
 # Django stuff:
 *.log
 
-Aves/Aves/settings.py
-Aves/Aves/*.pyc
-Aves/portal/*.pyc
+aves/aves/settings.py
+aves/aves/*.pyc
+aves/portal/*.pyc
 *.pyc
 
 settings.py

@@ -11,59 +11,32 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Amenazas',
+            name='Autor',
             fields=[
-                ('idamenaza', models.AutoField(serialize=False, primary_key=True)),
-                ('clasificacion', models.CharField(max_length=3, unique=True, null=True, blank=True)),
+                ('id_autor', models.IntegerField(serialize=False, primary_key=True)),
+                ('nombre', models.CharField(max_length=45, null=True, blank=True)),
+                ('bibliografia', models.CharField(max_length=500, null=True, blank=True)),
+                ('observaciones', models.CharField(max_length=450, null=True, blank=True)),
             ],
             options={
-                'db_table': 'amenazas',
-                'managed': False,
-            },
-        ),
-        migrations.CreateModel(
-            name='Autores',
-            fields=[
-                ('idautor', models.AutoField(serialize=False, primary_key=True)),
-                ('autor', models.CharField(unique=True, max_length=25)),
-                ('bibliografia', models.CharField(max_length=445, null=True, blank=True)),
-                ('a_opublicacion', models.CharField(max_length=8, null=True, db_column='a\xf1opublicacion', blank=True)),
-                ('a_orecoleccion', models.CharField(max_length=10, null=True, db_column='a\xf1orecoleccion', blank=True)),
-                ('fecha', models.CharField(max_length=35, null=True, blank=True)),
-            ],
-            options={
-                'db_table': 'autores',
-                'managed': False,
-            },
-        ),
-        migrations.CreateModel(
-            name='AutoresAves',
-            fields=[
-                ('idestudio', models.AutoField(serialize=False, primary_key=True)),
-                ('fuente', models.CharField(max_length=15, null=True, blank=True)),
-            ],
-            options={
-                'db_table': 'autores_aves',
+                'db_table': 'autor',
                 'managed': False,
             },
         ),
         migrations.CreateModel(
             name='Aves',
             fields=[
-                ('codigo', models.AutoField(serialize=False, primary_key=True)),
-                ('codigoespecie', models.CharField(unique=True, max_length=10)),
-                ('clase', models.CharField(max_length=4)),
-                ('namebird', models.CharField(max_length=35, null=True, blank=True)),
-                ('sinonimo', models.CharField(max_length=55, null=True, blank=True)),
-                ('utm_wgs', models.CharField(max_length=3, null=True, blank=True)),
-                ('utm_zone', models.CharField(max_length=17, null=True, blank=True)),
-                ('migracion', models.CharField(max_length=15)),
-                ('endemica', models.CharField(max_length=15)),
-                ('morfometrica', models.CharField(max_length=3, null=True, blank=True)),
-                ('ecologia', models.CharField(max_length=3, null=True, blank=True)),
-                ('comportamiento', models.CharField(max_length=3, null=True, blank=True)),
-                ('llamada', models.CharField(max_length=3, null=True, blank=True)),
-                ('observacion', models.CharField(max_length=400, null=True, blank=True)),
+                ('id_aves', models.IntegerField(serialize=False, primary_key=True)),
+                ('codigo', models.CharField(max_length=45, null=True, blank=True)),
+                ('sinonimo', models.CharField(max_length=100, null=True, blank=True)),
+                ('nombre', models.CharField(max_length=100, null=True, blank=True)),
+                ('morfometria', models.CharField(max_length=100, null=True, blank=True)),
+                ('endemismo', models.CharField(max_length=100, null=True, blank=True)),
+                ('migracion', models.CharField(max_length=100, null=True, blank=True)),
+                ('ecologia', models.CharField(max_length=100, null=True, blank=True)),
+                ('behaviur', models.CharField(max_length=100, null=True, blank=True)),
+                ('anio_publicacion', models.CharField(max_length=45, null=True, blank=True)),
+                ('anio_collecion', models.CharField(max_length=45, null=True, blank=True)),
             ],
             options={
                 'db_table': 'aves',
@@ -71,21 +44,40 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='Denominacion',
+            name='AvesAutor',
             fields=[
-                ('iddenominacion', models.AutoField(serialize=False, primary_key=True)),
-                ('ordenclade', models.CharField(unique=True, max_length=25)),
+                ('id_aves_autor', models.IntegerField(serialize=False, primary_key=True)),
             ],
             options={
-                'db_table': 'denominacion',
+                'db_table': 'aves_autor',
+                'managed': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AvesLocalizacion',
+            fields=[
+                ('id_aves_localizacion', models.IntegerField(serialize=False, primary_key=True)),
+            ],
+            options={
+                'db_table': 'aves_localizacion',
+                'managed': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='AvesSource',
+            fields=[
+                ('id_aves_source', models.IntegerField(serialize=False, primary_key=True)),
+            ],
+            options={
+                'db_table': 'aves_source',
                 'managed': False,
             },
         ),
         migrations.CreateModel(
             name='Especies',
             fields=[
-                ('idespecie', models.AutoField(serialize=False, primary_key=True)),
-                ('nombespecie', models.CharField(unique=True, max_length=35)),
+                ('id_especies', models.IntegerField(serialize=False, primary_key=True)),
+                ('nombre', models.CharField(max_length=100, null=True, blank=True)),
             ],
             options={
                 'db_table': 'especies',
@@ -93,85 +85,107 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='EspeciesAves',
+            name='EspeciesFotos',
             fields=[
-                ('idclasificacion', models.AutoField(serialize=False, primary_key=True)),
+                ('id_especie_fotos', models.IntegerField(serialize=False, primary_key=True)),
             ],
             options={
-                'db_table': 'especies_aves',
+                'db_table': 'especies_fotos',
                 'managed': False,
             },
         ),
         migrations.CreateModel(
-            name='Familias',
+            name='Familia',
             fields=[
-                ('idfamilia', models.AutoField(serialize=False, primary_key=True)),
-                ('nombfamilia', models.CharField(unique=True, max_length=20)),
+                ('id_familia', models.IntegerField(serialize=False, primary_key=True)),
+                ('nombre', models.CharField(max_length=45, null=True, blank=True)),
             ],
             options={
-                'db_table': 'familias',
+                'db_table': 'familia',
                 'managed': False,
             },
         ),
         migrations.CreateModel(
-            name='Localidades',
+            name='Fotos',
             fields=[
-                ('idlocalidad', models.AutoField(serialize=False, primary_key=True)),
-                ('nombre', models.CharField(unique=True, max_length=75)),
+                ('id_fotos', models.IntegerField(serialize=False, primary_key=True)),
+                ('url', models.CharField(max_length=400, null=True, blank=True)),
             ],
             options={
-                'db_table': 'localidades',
+                'db_table': 'fotos',
                 'managed': False,
             },
         ),
         migrations.CreateModel(
-            name='LocalidadesAves',
+            name='Localizacion',
             fields=[
-                ('idlocal', models.AutoField(serialize=False, primary_key=True)),
-                ('ecosistema', models.CharField(max_length=75)),
-                ('nombftecoord', models.CharField(max_length=5, null=True, blank=True)),
-                ('toponim', models.CharField(max_length=30, null=True, blank=True)),
-                ('latitud', models.CharField(max_length=15)),
-                ('longitud', models.CharField(max_length=15)),
-                ('altitud', models.CharField(max_length=15)),
-                ('altitudmax', models.CharField(max_length=15)),
-                ('altitudmin', models.CharField(max_length=15)),
+                ('id_localizacion', models.IntegerField(serialize=False, primary_key=True)),
+                ('nombre', models.CharField(max_length=100, null=True, blank=True)),
+                ('latitud', models.FloatField(null=True, blank=True)),
+                ('longitud', models.FloatField(null=True, blank=True)),
+                ('toponimo', models.CharField(max_length=150, null=True, blank=True)),
+                ('altitud', models.FloatField(null=True, blank=True)),
+                ('max_altitud', models.FloatField(null=True, blank=True)),
+                ('min_altitud', models.FloatField(null=True, blank=True)),
+                ('ecosistema', models.CharField(max_length=100, null=True, blank=True)),
             ],
             options={
-                'db_table': 'localidades_aves',
+                'db_table': 'localizacion',
                 'managed': False,
             },
         ),
         migrations.CreateModel(
-            name='Paises',
+            name='Oorder',
             fields=[
-                ('idpais', models.CharField(max_length=3, serialize=False, primary_key=True)),
-                ('nombpais', models.CharField(max_length=60, unique=True, null=True, blank=True)),
+                ('id_order', models.IntegerField(serialize=False, primary_key=True)),
+                ('nombre', models.CharField(max_length=45, null=True, blank=True)),
             ],
             options={
-                'db_table': 'paises',
+                'db_table': 'oorder',
                 'managed': False,
             },
         ),
         migrations.CreateModel(
-            name='Provincias',
+            name='Pais',
             fields=[
-                ('idpro', models.AutoField(serialize=False, primary_key=True)),
-                ('nombprovincia', models.CharField(unique=True, max_length=100)),
+                ('id_pais', models.IntegerField(serialize=False, primary_key=True)),
+                ('nombre', models.CharField(max_length=45, null=True, blank=True)),
             ],
             options={
-                'db_table': 'provincias',
+                'db_table': 'pais',
                 'managed': False,
             },
         ),
         migrations.CreateModel(
-            name='Urls',
+            name='Provincia',
             fields=[
-                ('idurl', models.AutoField(serialize=False, primary_key=True)),
-                ('url', models.CharField(max_length=150)),
+                ('id_provincia', models.IntegerField(serialize=False, primary_key=True)),
+                ('nombre', models.CharField(max_length=45, null=True, blank=True)),
             ],
             options={
-                'db_table': 'urls',
+                'db_table': 'provincia',
+                'managed': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='Source',
+            fields=[
+                ('id_source', models.IntegerField(serialize=False, primary_key=True)),
+                ('nombre', models.CharField(max_length=45, null=True, blank=True)),
+            ],
+            options={
+                'db_table': 'source',
+                'managed': False,
+            },
+        ),
+        migrations.CreateModel(
+            name='Uicn',
+            fields=[
+                ('id_uicn', models.IntegerField(serialize=False, primary_key=True)),
+                ('nombre', models.CharField(max_length=45, null=True, blank=True)),
+            ],
+            options={
+                'db_table': 'uicn',
                 'managed': False,
             },
         ),

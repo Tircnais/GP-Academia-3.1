@@ -25,63 +25,44 @@ import random
 def mapa_view(request):
     datosblugares = []
     lugares = []
-    listalugares = LocalidadesAves.objects.distinct().all()  # 683
-    for lugar in listalugares:
-        ilugar = lugar.idlocal
-        latitud = lugar.latitud
-        longitud = lugar.longitud
-        ecosistema = lugar.ecosistema
-        topomin = lugar.toponim
-        altitud = lugar.altitud
-        fkpro = ""
-        nlugar = ""
-        print ilugar
-        if ilugar > 683:
-            print "No hay relacion"
-        else:
-            localidad = Localidades.objects.filter(idlocalidad=ilugar).all()[0]
-            fkpro = localidad.idpro
-            nlugar = localidad.nombre
-        # pro = Provincias.objects.filter(idpro=fkpro)
-        # nombpro = pro.nombprovincia
-        # print pro
-        # idp = pro.idpais
-        nombpro = ""
-        idp = 1
-        conteo = LocalidadesAves.objects.filter(
-            idlocal=localidad.idlocalidad).count()
+    listalugares = Localizacion.objects.distinct().all()
 
+    #----------------------Empiezo yo--------------_#
+    inicio = 20
+    listalugares = Localizacion.objects.distinct().all()[:inicio]
+    for lugar in listalugares:
+        fklugar = lugar.provincia_id_provincia.id_provincia
+        ilugar = lugar.id_localizacion
+        # lista = AvesLocalizacion.objects.filter(localizacion_id_localizacion=ilugar)
+        conteo = AvesLocalizacion.objects.filter(localizacion_id_localizacion=ilugar).count()
+        # print "->\t", inicio
+        inicio += 1
+        # print "FK lugar\t", fklugar
+        latitud = lugar.latitud
+        latitud = str(latitud).replace(',', '.')
+        longitud = lugar.longitud
+        longitud = str(longitud).replace(',', '.')
+        print "Coordenada:\t", latitud, " ", longitud
+        listaprovincias = Provincia.objects.filter(id_provincia=fklugar)
+        for provincia in listaprovincias:
+            fkpais = provincia.pais_id_pais.id_pais
+            nombpro = provincia.nombre
+            listapaises = Pais.objects.filter(id_pais=fkpais)
+            for pais in listapaises:
+                lugares.append((pais, provincia, lugar, latitud, longitud, conteo))
+    #----------------------Termino yo--------------_#
+
+    provincias = Provincia.objects.all()
+    for pro in provincias:
+        idpro = pro.id_provincia
+        # print idpro
+        nombpro = pro.nombre
+        idp = pro.pais_id_pais
+        localidad = Localizacion.objects.filter(provincia_id_provincia=idpro).all()[0]
+        conteo = AvesLocalizacion.objects.filter(localizacion_id_localizacion=localidad.id_localizacion).count()
         def r(): return random.randint(0, 255)
         colores = ('#%02X%02X%02X' % (r(), r(), r()))
         datosblugares.append((colores, idp, nombpro, conteo))
-        lugares.append((idp, nombpro, ilugar, nlugar, latitud,
-                        longitud, ecosistema, topomin, altitud))
-
-    # provincias = Provincias.objects.all()
-    # for pro in provincias:
-    #     idpro = pro.idpro
-    #     print idpro
-    #     nombpro = pro.nombprovincia
-    #     idp = pro.idpais
-    #     localidad = ""
-    #     if idpro != 15:
-    #         localidad = Localidades.objects.filter(idpro=idpro).all()[0]
-    #         conteo = LocalidadesAves.objects.filter(
-    #         idlocal=localidad.idlocalidad).count()
-    #         nlugar = localidad.nombre
-    #         ilugar = localidad.idlocalidad
-    #     lugar = LocalidadesAves.objects.filter(idlocal=ilugar).all()[0]
-    #     latitud = lugar.latitud
-    #     longitud = lugar.longitud
-    #     ecosistema = lugar.ecosistema
-    #     topomin = lugar.toponim
-    #     altitud = lugar.altitud
-
-    #     def r(): return random.randint(0, 255)
-    #     colores = ('#%02X%02X%02X' % (r(), r(), r()))
-    #     datosblugares.append((colores, idp, nombpro, conteo))
-    #     lugares.append((idp, nombpro, ilugar, nlugar, latitud,
-    #                     longitud, ecosistema, topomin, altitud))
 
     dicmapa = {
         'datosblugares': datosblugares,
@@ -90,179 +71,150 @@ def mapa_view(request):
     return render(request, 'mapa.html', dicmapa)
 
 
-"""
 def autores(request):
-    listaA = []
-    estudios = Autores.objects.all()
-    tuplas = ()
-    for x in estudios:
-        iautor = x.idautor
-        autor = x.autor
-        contador = Autores.objects.filter(
-            autoresaves__idautor=iautor).all().count()
-        ave = Aves.objects.filter(autoresaves__idautor=iautor).all()[0]
-        ave = ave.namebird
-        tuplas = (autor, contador, ave)
-        listaA.append(tuplas)
-    return render(request, 'autores.html')
-"""
+    dicAutores = {}
+    estudio = []
+    c = 0
+    listautores = Autor.objects.distinct('nombre').all()[:10]
+    for autor in listautores:
+        iautor = autor.id_autor
+        ave = Aves.objects.filter(avesautor__autor_id_autor=iautor).all()[0]
+        c += 1
+        # print "AVE: ", c, "\t", ave
+        contautor = AvesAutor.objects.filter(autor_id_autor=iautor).count()
+        estudio.append((autor, ave, contautor))
+    dicAutores['listaestudios'] = estudio
+
+    listafuentes = Source.objects.all()
+    total = AvesSource.objects.all().count()
+    arreglo = []
+    for fuente in listafuentes:
+        ifuente = fuente.id_source
+        nfuente = fuente.nombre
+        representa = AvesSource.objects.filter(source_id_source=ifuente).count()
+        representa = (representa * 100)/total
+        arreglo.append((representa, nfuente))
+    arreglo.sort()
+    uno = arreglo[3]
+    dos = arreglo[2]
+    tres = arreglo[1]
+    valorA = uno[0]
+    valorB = dos[0]
+    valorC = tres[0]
+    uno = uno[1]
+    dos = dos[1]
+    tres = tres[1]
+    dicAutores['uno'] = uno
+    dicAutores['dos'] = dos
+    dicAutores['tres'] = tres
+    dicAutores['valorA'] = valorA
+    dicAutores['valorB'] = valorB
+    dicAutores['valorC'] = valorC
+    return render(request, 'autores.html', dicAutores)
 
 
 def proconteo(request):
     contEc = []
     contPe = []
-    lisp = []
-    dicConteo = {}
-    paises = Paises.objects.all()
     paisymas = []
+    dicConteo = {}
     #----------------------Empiezo yo--------------_#
+    paises = Pais.objects.all()
     listapais = []
     listaprov = []
     listalocalidades = []
     acum = ''
+    # -------PARA EL CUADRO------------------#
     for pais in paises:
-        provincias = Provincias.objects.filter(idpais=pais.pk)
+        ipais = pais.id_pais
+        provincias = Provincia.objects.filter(pais_id_pais=ipais)
         for provinca in provincias:
-            lugares = Localidades.objects.filter(idpro=provinca.pk)
+            iprovincia = provinca.id_provincia
+            lugares = Localizacion.objects.filter(provincia_id_provincia=iprovincia)
             for x in lugares:
+                ilugar = x.id_localizacion
                 nombre = x.nombre
+                # print nombre
                 nombre = unicode(nombre)
-                cont = LocalidadesAves.objects.filter(idlocalidad=x.pk).count()
+                cont = AvesLocalizacion.objects.filter(localizacion_id_localizacion=ilugar).count()
                 cont = str(cont)
-                acum = acum + '{' +nombre + ',' + cont +'},' 
+                acum = '{' + nombre + ',' + cont + '},'
+                # print acum
                 listalocalidades.append((nombre, cont))
             listaprov.append((provinca, listalocalidades))
         listapais.append((pais, listaprov))
-    print acum
+    dicConteo['listapais'] = listapais
     #----------------------Termino yo--------------_#
 
-
-
-    # para el conteo por provinca
+    #____________________CONTENIDO TABLAS___________________#
     for pais in paises:
-        idp = pais.idpais
-        npais = pais.nombpais
-        provincias = Provincias.objects.filter(idpais=idp)
-        for marcador in provincias:
-            idpro = marcador.idpro
-            nombpro = marcador.nombprovincia
-            lisp.append((idpro, nombpro))
+        idp = pais.id_pais
+        npais = pais.nombre
+        provincias = Provincia.objects.filter(pais_id_pais=idp)
+        for provinca in provincias:
+            idpro = provinca.id_provincia
+            nombpro = provinca.nombre
             listalugares = ""
             caves = 0
-            if 'EC' in idp:
-                listalugares = Localidades.objects.filter(idpro=idpro)
+            if 'EC' in npais:
+                listalugares = Localizacion.objects.filter(provincia_id_provincia=idpro)
                 for x in listalugares:
-                    ilugar = x.idlocalidad
-                    conteo = LocalidadesAves.objects.filter(
-                        idlocal=ilugar).count()
-                    localidades = LocalidadesAves.objects.filter(
-                        idlocal=ilugar)
+                    ilugar = x.id_localizacion
+                    conteo = Localizacion.objects.filter(id_localizacion=ilugar).count()
+                    localidades = Localizacion.objects.filter(id_localizacion=ilugar)
                     caves += conteo
                 contEc.append((idpro, nombpro, caves))
                 # print "pais\t",pais
             else:
-                listalugares = Localidades.objects.filter(idpro=idpro)
+                listalugares = Localizacion.objects.filter(provincia_id_provincia=idpro)
                 for x in listalugares:
-                    ilugar = x.idlocalidad
-                    conteo = LocalidadesAves.objects.filter(
-                        idlocal=ilugar).count()
-                    localidades = LocalidadesAves.objects.filter(
-                        idlocal=ilugar)
+                    ilugar = x.id_localizacion
+                    conteo = Localizacion.objects.filter(id_localizacion=ilugar).count()
+                    localidades = Localizacion.objects.filter(id_localizacion=ilugar)
                     caves += conteo
                 contPe.append((idpro, nombpro, caves))
-
-    # Para el conteo por localidad
-    for pais in paises:
-        idp = pais.idpais
-        provincias = Provincias.objects.filter(idpais=idp)
-        for provincia in provincias:
-            idpro = provincia.idpro
-            nombpro = provincia.nombprovincia
-            listalugares = Localidades.objects.filter(idpro=idpro)
-            caves = 0
-            for x in listalugares:
-                ilugar = x.idlocalidad
-                conteo = LocalidadesAves.objects.filter(idlocal=ilugar).count()
-                caves += conteo
-                paisymas.append((pais, provincia, x, caves))
-
-    lisp = contEc + contPe
-    dicConteo['lisp'] = lisp
     dicConteo['contEc'] = contEc
     dicConteo['contPe'] = contPe
-    dicConteo['paisymas'] = paisymas
-    dicConteo['listapais'] = listapais
-    return render(request, "conteo.html", dicConteo)
 
-
-def amenazas_view(request):
+    # -----------------AMENAZAS----------------------#
     datosamenaza = []
-    dicamenazas = {}
-    if request.method == "POST" and 'amenazas' in request.POST:
-        datosamenaza = []
-        print "-->" + request.POST["tipoamenaza"]
-        idamenaza = request.POST["tipoamenaza"]
-        idamenaza = int(idamenaza)
-        detalle = ""
-        if idamenaza > 0:
-            detalle = Aves.objects.filter(amenaza=idamenaza).count()
-            detalleave = Aves.objects.filter(amenaza=idamenaza)[:detalle]
-        else:
-            idna = Amenazas.objects.filter(clasificacion='N/A')
-            detalle = Aves.objects.exclude(amenaza=idamenaza).count()
-            detalleave = Aves.objects.filter(amenaza=idamenaza)[:detalle]
-        dicamenazas['avesbajoamenaza'] = detalle
-        dicamenazas['detalleave'] = detalleave
-
-    listamenazas = Amenazas.objects.all()
+    listamenazas = Uicn.objects.all()
+    colorN = 0
     for amenaza in listamenazas:
-        idamenaza = amenaza.idamenaza
-        nombamenza = amenaza.clasificacion
-        numAvesAmenazadas = Aves.objects.filter(amenaza=idamenaza).count()
-        datosamenaza.append((idamenaza, nombamenza, numAvesAmenazadas))
-
-    dicamenazas['listamenazas'] = listamenazas
-    dicamenazas['datosamenaza'] = datosamenaza
-
-    return render(request, "amenazas.html", dicamenazas)
+        idamenaza = amenaza.id_uicn
+        nombamenza = amenaza.nombre
+        numAvesAmenazadas = Aves.objects.filter(uicn_id_uicn=idamenaza).count()
+        colorN += 1
+        # print colorN
+        datosamenaza.append((idamenaza, nombamenza, numAvesAmenazadas, colorN))
+    dicConteo['datosamenaza'] = datosamenaza
+    return render(request, "conteo.html", dicConteo)
 
 
 def clasificacion(request):
     datosclasifica = []
-    categoria = []
-    datospromedio = []
-    promedio = 0
-    suma = 0
-    c = 0
-    listclasificacion = []
-    listafamilias = Familias.objects.all()[:10]
-    for x in listafamilias:
-        c += 1
-        ifamilia = x.idfamilia
-        familia = x.nombfamilia
-        print "........." + familia
-        contEspecie = Especies.objects.filter(idfamilia=ifamilia).count()
-        suma += contEspecie
-        listaespecies = Especies.objects.filter(idfamilia=ifamilia).all()[0]
-        especie = listaespecies.nombespecie
-        categoria.append(familia)
-        datosclasifica.append((especie, contEspecie))
-        promedio = suma / c
-    datospromedio.append(promedio)
+    conteo = []
+    listaespecie = Especies.objects.all()
+    for especie in listaespecie:
+        iespecie = especie.id_especies
+        cont = Aves.objects.filter(especies_id_especies=iespecie).count()
+        if cont > 200:
+            conteo.append((especie, cont))
 
-    listordenes = Denominacion.objects.all()
+    listordenes = Oorder.objects.all()
     for orden in listordenes:
-        iorden = orden.iddenominacion
-        listafamilias = Familias.objects.filter(iddenominacion= iorden)
-        contFamilias = Familias.objects.filter(iddenominacion= iorden).count()
+        iorden = orden.id_order
+        listafamilias = Familia.objects.filter(order_id_order=iorden)
         for familia in listafamilias:
-            ifamilia = familia.idfamilia
-            listaespecies = Especies.objects.filter(idfamilia= ifamilia)
-            contEspecie = Especies.objects.filter(idfamilia= ifamilia).count()
+            ifamilia = familia.id_familia
+            contFamilia = Aves.objects.filter(familia_id_familia=ifamilia).count()
+            print "Familia:\t", contFamilia
+            if contFamilia > 500:
+                datosclasifica.append((familia, contFamilia))
 
     dicinfo = {
         'datosclasifica': datosclasifica,
-        'categoria': categoria,
+        'listaespecie': conteo
     }
 
     #, context_instance=RequestContext(request)
@@ -272,19 +224,18 @@ def clasificacion(request):
 def index(request):
     totales = []
     mejoresautores = []
-    numAves = Aves.objects.all().count()
-    numAmenazas = Amenazas.objects.all().count()
-    numOrden = Denominacion.objects.all().count()
-    numFamilias = Familias.objects.all().count()
+    numAves = Aves.objects.distinct('nombre').all().count()
+    numAmenazas = Uicn.objects.all().count()
+    numOrden = Oorder.objects.all().count()
+    numFamilias = Familia.objects.all().count()
     numEspecies = Especies.objects.all().count()
-    numAutores = Autores.objects.all().count()
-    listautores = Autores.objects.all()
+    numAutores = Autor.objects.all().count()
+    listautores = Autor.objects.all().distinct('nombre')
     for autor in listautores:
-        iautor = autor.idautor
-        nombre = autor.autor
-        contautor = AutoresAves.objects.filter(idautor=iautor).count()
-        # if contautor > 10:
-        mejoresautores.append((nombre, contautor))
+        iautor = autor.id_autor
+        contautor = AvesAutor.objects.filter(autor_id_autor=iautor).count()
+        # print autor.nombre
+        mejoresautores.append((autor, contautor))
     totales.append(("Aves", numAves))
     totales.append(("Amenazas", numAmenazas))
     totales.append(("Orden", numOrden))
@@ -303,9 +254,21 @@ def index(request):
 
 
 def fotos(request):
-    urlfotos = Urls.objects.all()[:20]
-    # Muestra 12 fotos por pagina (multiplos de 4 por el responsive)
-    paginator = Paginator(urlfotos, 8)
+    urlfotos = Fotos.objects.distinct('url').all()[:12]
+    # cont = 1
+    detalle = []
+    for foto in urlfotos:
+        ifoto = foto.id_fotos
+        # print "-->", ifoto
+        especie = Especies.objects.filter(especiesfotos__fotos_id_fotos__id_fotos=ifoto)[0]
+        iespecie = especie.id_especies
+        ave = Aves.objects.filter(especies_id_especies=iespecie)[0]
+        # print especie.nombre
+        # print cont
+        # cont += 1
+        detalle.append((foto, especie, ave))
+    # Muestra 12 fotos por pagina (multiplos de 3 por el responsive)
+    paginator = Paginator(urlfotos, 4)
     page = request.GET.get('page')
     try:
         imagenes = paginator.page(page)
@@ -315,9 +278,10 @@ def fotos(request):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         imagenes = paginator.page(paginator.num_pages)
-
+    imagenes = imagenes
     cntxtFoto = {
-        'paginas': imagenes
+        'paginas': imagenes,
+        'listafotos': detalle,
     }
     return render(request, "galeria.html", cntxtFoto)
 
@@ -330,10 +294,10 @@ def ajax_familia(request):
         req = {}
         idorde = request.POST.getlist('idorden')[0]
         print "idorden:\t", idorde
-        listafamilias = Familias.objects.filter(iddenominacion=idorde).all()
+        listafamilias = Familia.objects.filter(order_id_order=idorde).all()
         print "-->", listafamilias
         filtrofamilias = json.dumps(
-            [{'idfamilia': f.idfamilia, 'nombfamilia': f.nombfamilia, 'idorden': f.iddenominacion} for f in listafamilias])
+            [{'id_familia': f.id_familia, 'nombfamilia': f.nombfamilia, 'idorden': f.id_order} for f in listafamilias])
         req['mensaje'] = 'Correcto... datos familia'
         req['filtrofamilias'] = filtrofamilias
         print "fin_entra ajax"
@@ -350,10 +314,10 @@ def ajaxlocalidades(request):
     if request.is_ajax() == True:
         req = {}
         idlugar = request.POST.getlist('idlugar')[0]
-        lugares = Localidades.objects.filter(
-            provincias__idpro__idlocalidad=idlugar).all()
+        lugares = Localizacion.objects.filter(
+            provincias__idpro__id_localizacion=idlugar).all()
         lugares = json.dumps([
-            {'idlugar': l.idlocalidad,
+            {'idlugar': l.id_localizacion,
             'nombre': l.nombre,
             'idpro': l.idpro}
             for l in lugares])
@@ -366,10 +330,10 @@ def ajax_lugares(request):
     if request.is_ajax() == True:
         req = {}
         idpr = request.POST.getlist('idpro')[0]
-        # el lugar|localidad se filtra por la provincia (, idlocalidad=lugar)
-        listalugares = Localidades.objects.filter(idpro=idpr)
+        # el lugar|localidad se filtra por la provincia (, id_localizacion=lugar)
+        listalugares = Localizacion.objects.filter(provincia_id_provincia=idpr)
         listalugares = json.dumps([
-            {'idlocalidad': l.idlocalidad,
+            {'id_localizacion': l.id_localizacion,
              'nombre': l.nombre,
              'idpro': l.idpro} for l in listalugares])
 

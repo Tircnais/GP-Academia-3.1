@@ -1,0 +1,85 @@
+id_autor,nombre,bibliografia,observaciones
+1,Ridgely R.,Ridgely R. 2008. The birds of Fundacion Jocotoco's Buenaventura Reserve. In Fundación Jocotoco webpage. ,"Es un documento publicado por la Fundación Jocotoco, faltan algunos datos."
+2,Jiggins et al. ,"Jiggins, C. D.; Andrade, P.; Cueva, E.; Dixon, S.; Isherwood, I.; Willis, J. 1999. The conservation of three forests in south west Ecuador: Reserva Natural El Tundo, Hacienda Jujal and Tambo Negro. Biosphere publications Research Report Nº 2. Cambridge. ","Las coordenadas son de la página de la fundación arcoíris, estan solo en UTM"
+3,Jiggins et al. ,"Jiggins, C. D.; Andrade, P.; Cueva, E.; Dixon, S.; Isherwood, I.; Willis, J. 1999. The conservation of three forests in south west Ecuador: Reserva Natural El Tundo, Hacienda Jujal and Tambo Negro. Biosphere publications Research Report Nº 2. Cambridge. ","Las coordenadas fueron tomadas del documentop oficial, son uno de todos los puntos limites mencionados. "
+4,Jiggins et al.,"Jiggins, C. D.; Andrade, P.; Cueva, E.; Dixon, S.; Isherwood, I.; Willis, J. 1999. The conservation of three forests in south west Ecuador: Reserva Natural El Tundo, Hacienda Jujal and Tambo Negro. Biosphere publications Research Report Nº 2. Cambridge. ",Coordenadas y altitud del BirdLife
+5,Ridgely R. ,Ridgely R. 2008. The birds of Fundacion Jocotoco's Buenaventura Reserve. In Fundación Jocotoco webpage. ,Reporte original: G. nubicola
+6,Benìtez V. & Sánchez T. ,"Benìtez V. & Sánchez T. 2001. Evaluación Ecológica rápida del avifauna en los bosques secos de La Ceiba y la Coordillera Arañitas, Provincia de Loja, Ecuador.En: Vázquez, M.A., M. Larrea, L. SuárezyP. Ojeda (Eds.). Biodiversidad en los bosques secos del suroccidente de la provincia de Laja: un reporte de las evaluaciones ecológicas y socioeconómicas rápidas. EcoCiencia, Ministerio del Ambiente, Herbario LOJA y Proyecto Bosque Seco. Quito.",
+7,Bonaccorso et al.,"Bonaccorso E., SantanderT., Freile J., Tinoco B. & Rodas F. 2007. Avifauna and Conservation of the Cerro Negro-Cazaderos area, Tumbesian Ecuador. Cotinga. 61-66.",
+8,"Molina et al., in prep.",,
+9,Tinoco B.,Tino B. 2009. Estacionalidad de la comunidad de Aves en un bosque deciduo tumbesino en el sur occidente de Ecuador. Ornitología Neotropical. 20:157-170.,
+10,Santander et al. ,"Santander T., Bonaccorso E. & Freile J. 2005. Evaluación Ecológica Rápida del avifauna en dos localidades de bosque seco en el occidente de la provincia de Loja. En: Vázquez, M.A., J.F. Freire y L. Suárez (Eds.). Biodiversidad en los bosques secos de la zona de Cerro Negro-Cazaderos, occidente de la provincia de Loja: un reporte de las evaluaciones ecológicas y socioeconómicas rápidas. EcoCiencia, MAE y Proyecto Bosque Seco. Quito.",
+11,Cisneros-Heredia D.,"Cisneros-Heredia D. 2005. La Avifauna de la Isla de la Plata, Parque Nacional Machalilla, Ecuador. Con notas sobre nuevos registros. Cotinga. 22-27",
+12,Knowlton & Graham,Knowlon J & Graham C. 2011. Species interactions are disrupted by habitat degradation in the highly threatened Tumbesian region of Ecuador. Ecological Applications. 21(8): 2974-2986.,
+13,Angulo-Pratolongo et al. ,"Angulo-Pratolongo F., Schulenberg T., Puse-Fernández E. & Elberth. 2010. Las Aves de los Humedales de Eten, Lambayeque, Peru. Ecología Aplicada. 9(2): 71-81.",
+14,Chávez-Villavicencio C. ,"Chávez-Villavicencio C. 2013. Las aves de la ciudad de Piura, Perú y sus alrededores: Ocho años mirando al Cielo. The Biologist. 11(2): 193-204.",
+15,Parker T. ,"Parker T. 1992 In Parker, T.A., III, and J.L. Carr, eds. Status of forest remmants in the Cordillera de la Costa and adjacent areas of Sothwestern Ecuador.  Conservation International. ",
+16,Parker T. ,"Parker T. 1992 In Parker, T.A., III, and J.L. Carr, eds. Status of forest remmants in the Cordillera de la Costa and adjacent areas of Sothwestern Ecuador.  Conservation International. ",Reporte original: G. brasilianum
+17,Parker T. ,"Parker T. 1992 In Parker, T.A., III, and J.L. Carr, eds. Status of forest remmants in the Cordillera de la Costa and adjacent areas of Sothwestern Ecuador.  Conservation International. ",Estos datos fueron colctados por Greenfield P. Pero no da datos exactos de nada.
+18,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Bosque Protector Cerro Pata de Pájaro.,
+19,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Hacienda Camarones.,
+20,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Reserva Biológica Tito Santos. ,
+21,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Centro Científico Río Palenque.,
+22,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Cordillera El Bálsamo,
+23,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Isla de la Plata.,
+24,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Parque Nacional Machalilla y alrededores.,
+25,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Reserva Ecológica Comunal Loma Alta. ,
+26,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Lagunas de Ecuasal-Salinas.,
+27,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Represa Velasco Ibarra.,
+28,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Engunga.,
+29,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Estación Científica Pedro Franco Dávila.,
+30,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Abras de Mantequilla.,
+31,birdLife,BirdLife International (2015) Important Bird Areas factsheet: Abras de Mantequilla.,
+32,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Bosque Protector Chongón-Colonche.,
+33,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Bosque Protector Cerro Blanco. ,
+34,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Isla Santay.,
+35,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Reserva Ecológica Manglares-Churute. ,
+36,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Reserva Ecológica Arenillas.,
+37,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Yunguilla Reserve (Reserva Yunguilla).,
+38,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Reserva Buenaventura.,
+39,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Reserva Buenaventura.,
+40,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Catacocha.,
+41,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Bosque Protector Puyango.,
+42,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: La Tagua. ,
+43,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Alamor-Celica. ,
+44,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Cañón del río Catamayo.,
+45,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Bosque Protector Jatumpamba-Jorupe. ,
+46,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Tambo Negro.,
+47,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Utuana-Bosuqe de Hanne,
+48,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Cazaderos-Mangahurquillo,
+49,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Reserva Natural Tumbesi-La Ceiba-Zapotillo,
+50,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Parque Nacional Cerro de Amotape.,"No menciona ecossitema, pero hace refencia a 4 zonas de vida dominadas por: Ceibal, chaparral y algarrobal. "
+51,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Coto de Caza el Angolo.,
+52,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Talara,
+53,BirdLife,BirdLife International (2015) Important Bird Areas factsheet:Talara.,
+54,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Suyo-La Tina. ,
+55,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Bosque de Cuyas.,
+56,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Aypate,
+57,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Paltashaco.,
+58,BirdLife,BirdLife International (2015) Important Bird Areas factsheet: Bosques Secos de Salitral - Huarmaca - Olmos. ,
+59,birdlife,BirdLife International (2015) Important Bird Areas factsheet: Manglares de San Pedro - Vice.,
+60,birdlife,BirdLife International (2015) Important Bird Areas factsheet: Chiñama. ,
+61,birdlife,BirdLife International (2015) Important Bird Areas factsheet: Laquipampa. ,
+62,birdlife,BirdLife International (2015) Important Bird Areas factsheet: Santuario Histórico Bosque de Pomac,
+63,birdlife,BirdLife International (2015) Important Bird Areas factsheet: Chaparrí. ,
+64,birdlife,BirdLife International (2015) Important Bird Areas factsheet: Las Delicias. ,
+65,birdlife,BirdLife International (2015) Important Bird Areas factsheet: Alto Valle del Saña. ,
+66,birdlife,BirdLife International (2015) Important Bird Areas factsheet: Rafán.,
+67,birdlife,BirdLife International (2015) Important Bird Areas factsheet: Llaguén. ,
+68,Bird specimens,,PRESERVED_SPECIMEN
+69,EBIRD_PE,,HUMAN_OBSERVATION
+70,EBIRD,,HUMAN_OBSERVATION
+71,EBIRD_CAN,,HUMAN_OBSERVATION
+72,EBIRD_MEX,,HUMAN_OBSERVATION
+73,EBIRD_CL,,HUMAN_OBSERVATION
+74,Birds,,PRESERVED_SPECIMEN
+75,Bird,,PRESERVED_SPECIMEN
+76,Bird specimens,,Reporte original: G. brasilianum
+77,UTPL (PY1256),,Captura
+78,"Ordóñez-Delgado, L. ",http://www.xeno-canto.org/contributor/RJNSQXBIJE,
+79,Ninguno,Ninguno,"Zapotillo, bosque, zona no intervenida."
+80,Ninguno,Ninguno,"Zapotillo, zona intervenida"
+81,Ninguno,Ninguno,"Ceiba, bosque no intervenido"
+82,Ninguno,Ninguno,"Ceiba, zona intervenida."
+83,Ninguno,Ninguno,"Cabeza de toro, bosque no intervenido"
+84,Ninguno,Ninguno,"Cabeza de toro, zona intervenida"
