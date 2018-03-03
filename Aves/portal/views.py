@@ -118,42 +118,40 @@ def proconteo(request):
     contPe = []
     paisymas = []
     dicConteo = {}
-    #----------------------Empiezo yo--------------_#
-    paises = Pais.objects.all()
+    #-----------------PARA EL CUADRO---------------------#
     listapais = []
     listaprov = []
     listalocalidades = []
     acum = ''
-    # -------PARA EL CUADRO------------------#
+    paises = Pais.objects.all()
     for pais in paises:
         ipais = pais.id_pais
         provincias = Provincia.objects.filter(pais_id_pais=ipais)
-        for provinca in provincias:
-            iprovincia = provinca.id_provincia
+        for provincia in provincias:
+            iprovincia = provincia.id_provincia
             lugares = Localizacion.objects.filter(provincia_id_provincia=iprovincia)
             for x in lugares:
                 ilugar = x.id_localizacion
                 nombre = x.nombre
-                # print nombre
                 nombre = unicode(nombre)
                 cont = AvesLocalizacion.objects.filter(localizacion_id_localizacion=ilugar).count()
                 cont = str(cont)
                 acum = '{' + nombre + ',' + cont + '},'
-                # print acum
+                # print "idpais ", pais.nombre, " provincia ", provincia.nombre, " Lugar ", nombre, " Cant AVES", cont
                 listalocalidades.append((nombre, cont))
-            listaprov.append((provinca, listalocalidades))
+            listaprov.append((provincia, listalocalidades))
         listapais.append((pais, listaprov))
     dicConteo['listapais'] = listapais
-    #----------------------Termino yo--------------_#
+
 
     #____________________CONTENIDO TABLAS___________________#
     for pais in paises:
         idp = pais.id_pais
         npais = pais.nombre
         provincias = Provincia.objects.filter(pais_id_pais=idp)
-        for provinca in provincias:
-            idpro = provinca.id_provincia
-            nombpro = provinca.nombre
+        for provincia in provincias:
+            idpro = provincia.id_provincia
+            nombpro = provincia.nombre
             listalugares = ""
             caves = 0
             if 'EC' in npais:
@@ -176,6 +174,7 @@ def proconteo(request):
     dicConteo['contEc'] = contEc
     dicConteo['contPe'] = contPe
 
+
     # -----------------AMENAZAS----------------------#
     datosamenaza = []
     listamenazas = Uicn.objects.all()
@@ -185,7 +184,6 @@ def proconteo(request):
         nombamenza = amenaza.nombre
         numAvesAmenazadas = Aves.objects.filter(uicn_id_uicn=idamenaza).count()
         colorN += 1
-        # print colorN
         datosamenaza.append((idamenaza, nombamenza, numAvesAmenazadas, colorN))
     dicConteo['datosamenaza'] = datosamenaza
     return render(request, "conteo.html", dicConteo)
@@ -204,17 +202,31 @@ def clasificacion(request):
     listordenes = Oorder.objects.all()
     for orden in listordenes:
         iorden = orden.id_order
-        listafamilias = Familia.objects.filter(order_id_order=iorden)
+        listafamilias = Familia.objects.filter(order_id_order=iorden).all()
+        contorden = Familia.objects.filter(order_id_order=iorden).count()
         for familia in listafamilias:
             ifamilia = familia.id_familia
-            contFamilia = Aves.objects.filter(familia_id_familia=ifamilia).count()
-            print "Familia:\t", contFamilia
-            if contFamilia > 500:
-                datosclasifica.append((familia, contFamilia))
+            contAves = Aves.objects.filter(familia_id_familia=ifamilia).count()
+            if contAves > 500:
+                datosclasifica.append((familia, contAves))
 
+    datosarbol = []
+    datosfamilia = []
+    listordenes = Oorder.objects.all()[:4]
+    for orden in listordenes:
+        iorden = orden.id_order
+        listafamilias = Familia.objects.filter(order_id_order=iorden)
+        contFamilia = Familia.objects.filter(order_id_order=iorden).count()
+        for familia in listafamilias:
+            ifamilia = familia.id_familia
+            contAves = Aves.objects.filter(familia_id_familia=ifamilia).count()
+            # if contAves > 500:
+            datosfamilia.append((familia, contAves))
+        datosarbol.append((orden, datosfamilia, contFamilia))
     dicinfo = {
         'datosclasifica': datosclasifica,
-        'listaespecie': conteo
+        'listaespecie': conteo,
+        'datosarbol': datosarbol
     }
 
     #, context_instance=RequestContext(request)
@@ -285,59 +297,3 @@ def fotos(request):
     }
     return render(request, "galeria.html", cntxtFoto)
 
-
-# AJAX
-@csrf_exempt
-def ajax_familia(request):
-    if request.is_ajax() == True:
-        print "entra ajax"
-        req = {}
-        idorde = request.POST.getlist('idorden')[0]
-        print "idorden:\t", idorde
-        listafamilias = Familia.objects.filter(order_id_order=idorde).all()
-        print "-->", listafamilias
-        filtrofamilias = json.dumps(
-            [{'id_familia': f.id_familia, 'nombfamilia': f.nombfamilia, 'idorden': f.id_order} for f in listafamilias])
-        req['mensaje'] = 'Correcto... datos familia'
-        req['filtrofamilias'] = filtrofamilias
-        print "fin_entra ajax"
-        return JsonResponse(req, safe=False)
-
-
-# return render_to_response('index.html', context_instance=RequestContext(request))
-"""
-#AKI ver como s implementan los SELECTs para lo d LUGAREs#
-
-
-@csrf_exempt
-def ajaxlocalidades(request):
-    if request.is_ajax() == True:
-        req = {}
-        idlugar = request.POST.getlist('idlugar')[0]
-        lugares = Localizacion.objects.filter(
-            provincias__idpro__id_localizacion=idlugar).all()
-        lugares = json.dumps([
-            {'idlugar': l.id_localizacion,
-            'nombre': l.nombre,
-            'idpro': l.idpro}
-            for l in lugares])
-        req['lugares'] = lugares
-        return JsonResponse(req, safe=False)
-
-
-@csrf_exempt
-def ajax_lugares(request):
-    if request.is_ajax() == True:
-        req = {}
-        idpr = request.POST.getlist('idpro')[0]
-        # el lugar|localidad se filtra por la provincia (, id_localizacion=lugar)
-        listalugares = Localizacion.objects.filter(provincia_id_provincia=idpr)
-        listalugares = json.dumps([
-            {'id_localizacion': l.id_localizacion,
-             'nombre': l.nombre,
-             'idpro': l.idpro} for l in listalugares])
-
-        req['mensaje'] = 'Correcto.... buscando ajax'
-        req['listalugares'] = listalugares
-        return JsonResponse(req, safe=False)
-"""

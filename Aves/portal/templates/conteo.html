@@ -16,6 +16,17 @@
 			<div class="col-xs-4">
 				<div id="cuadropaises">
 					<p>Algo va mal... revisar la conexión de internet.</p>
+					{% for pais in listapais %}
+						<p>'{{ pais.0.nombre }}': {
+							{% for provincia in pais.1 %}
+								<label for="">'{{provincia.0.nombre}}': {
+									{% for lugares in provincia.1 %}
+										'{{ lugares.0 }}': '{{ lugares.1 }}',<br>
+									{% endfor %}
+								},</label>
+							{% endfor %}
+				        },</p>
+		        	{% endfor %}
 				</div>
 			</div>
 			<div class="col-xs-4">
@@ -34,7 +45,7 @@
 		<div class="row">
 			<div class="col-xs-6">
 				<h3 class="col-xs-12 borde text-center">Ecuador</h3>
-				<section class="negro datatablas">
+				<section class="datatablas table-responsive">
 					<table id="example" class="display" width="100%">
 						<thead>
 			                <tr class="success">
@@ -64,17 +75,17 @@
 			</div>
 			<div class="col-xs-6">
 				<h3 class="col-xs-12 borde text-center">Perú</h3>
-				<section class="datatablas">
+				<section class="datatablas table-responsive">
 					<table id="example2" class="display" width="100%">
 						<thead>
-			                <tr class="success">
+			                <tr class="active">
 			                    <th>Codigo de Provincia</th>
 			                    <th>Provincia</th>
 			                    <th>Total de Aves</th>
 			                </tr>
 			            </thead>
 			            <tfoot>
-			            	<tr class="info">
+			            	<tr class="warning">
 			                    <th>Codigo de Provincia</th>
 			                    <th>Provincia</th>
 			                    <th>Total de Aves</th>

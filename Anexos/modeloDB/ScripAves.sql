@@ -65,7 +65,7 @@ ALTER TABLE gpaves.Especies OWNER TO academia;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS gpaves.Fotos (
   id_fotos INT NOT NULL UNIQUE,
-  url VARCHAR(400) NULL
+  url VARCHAR(400) NULL,
   PRIMARY KEY (id_fotos)
   );
 ALTER TABLE gpaves.Fotos OWNER TO academia;
@@ -286,21 +286,21 @@ ALTER TABLE gpaves.Aves_Localizacion OWNER TO academia;
 -- INSERTS
 -- -----------------------------------------------------
 
-\COPY gpaves.Oorder(id_order,nombre) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Order.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Familia(id_familia,nombre,order_id_order) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Familia.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Especies(id_especies,nombre) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Especies.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Fotos(id_fotos,url) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Fotos.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Especies_Fotos(id_Especie_Fotos,Especie_id_especies ,Fotos_id_fotos) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Especie_fotos.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Pais(id_pais,nombre) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Paises.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Provincia(id_provincia,nombre,pais_id_pais) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Provincias.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Autor(id_autor,nombre, bibliografia, observaciones) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Autores.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Source(id_source,nombre) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Source.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.UICN(id_UICN,nombre) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/UICN.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Aves(id_aves,codigo,sinonimo,nombre,morfometria,endemismo,migracion,ecologia,behaviur,anio_publicacion,anio_collecion,familia_id_familia,especies_id_especies,uicn_id_UICN) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Aves.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Aves_Autor(id_Aves_Autor,Aves_id_aves,Autor_id_autor) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Aves_Autor.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Aves_Source(id_Aves_Source,Aves_id_aves,Source_id_source) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Aves_Source.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Localizacion(id_localizacion,nombre,latitud,longitud,toponimo,altitud,max_altitud,min_altitud,ecosistema,Provincia_id_provincia) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Localizacion.csv' DELIMITER ',' CSV HEADER;
-\COPY gpaves.Aves_Localizacion(id_Aves_Localizacion,Aves_id_aves,Localizacion_id_localizacion) FROM '/home/pc/Documentos/GP-Academia-3.1-1/Anexos/Aves_Localizacion.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Oorder(id_order,nombre) FROM '/home/pc/gp/Order.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Familia(id_familia,nombre,order_id_order) FROM '/home/pc/gp/Familia.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Especies(id_especies,nombre) FROM '/home/pc/gp/Especies.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Fotos(id_fotos,url) FROM '/home/pc/gp/Fotos.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Especies_Fotos(id_Especie_Fotos,Especie_id_especies ,Fotos_id_fotos) FROM '/home/pc/gp/Especie_fotos.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Pais(id_pais,nombre) FROM '/home/pc/gp/Paises.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Provincia(id_provincia,nombre,pais_id_pais) FROM '/home/pc/gp/Provincias.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Autor(id_autor,nombre, bibliografia, observaciones) FROM '/home/pc/gp/Autores.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Source(id_source,nombre) FROM '/home/pc/gp/Source.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.UICN(id_UICN,nombre) FROM '/home/pc/gp/UICN.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Aves(id_aves,codigo,sinonimo,nombre,morfometria,endemismo,migracion,ecologia,behaviur,anio_publicacion,anio_collecion,familia_id_familia,especies_id_especies,uicn_id_UICN) FROM '/home/pc/gp/Aves.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Aves_Autor(id_Aves_Autor,Aves_id_aves,Autor_id_autor) FROM '/home/pc/gp/Aves_Autor.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Aves_Source(id_Aves_Source,Aves_id_aves,Source_id_source) FROM '/home/pc/gp/Aves_Source.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Localizacion(id_localizacion,nombre,latitud,longitud,toponimo,altitud,max_altitud,min_altitud,ecosistema,Provincia_id_provincia) FROM '/home/pc/gp/Localizacion.csv' DELIMITER ',' CSV HEADER;
+\COPY gpaves.Aves_Localizacion(id_Aves_Localizacion,Aves_id_aves,Localizacion_id_localizacion) FROM '/home/pc/gp/Aves_Localizacion.csv' DELIMITER ',' CSV HEADER;
 
 
 -- -----------------------------------------------------
