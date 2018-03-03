@@ -274,13 +274,13 @@ def fotos(request):
         # print "-->", ifoto
         especie = Especies.objects.filter(especiesfotos__fotos_id_fotos__id_fotos=ifoto)[0]
         iespecie = especie.id_especies
-        ave = Aves.objects.filter(especies_id_especies=iespecie)[0]
+        ave = Aves.objects.filter(especies_id_especies=iespecie).all()[0]
         # print especie.nombre
         # print cont
         # cont += 1
         detalle.append((foto, especie, ave))
     # Muestra 12 fotos por pagina (multiplos de 3 por el responsive)
-    paginator = Paginator(urlfotos, 4)
+    paginator = Paginator(urlfotos, 6)
     page = request.GET.get('page')
     try:
         imagenes = paginator.page(page)
