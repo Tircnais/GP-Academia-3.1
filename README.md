@@ -6,32 +6,40 @@
 
  1. Instalacion de librerias en Ubuntu 16.04 
     
-    `sudo apt-get update
+    ```
+    sudo apt-get update
     sudo apt-get install python-dev
     sudo apt-get install python-setuptools
     sudo apt-get install postgresql
-    sudo apt-get install postgresql-server-dev-9.3`
+    sudo apt-get install postgresql-server-dev-9.3
+    ```
 
  2. Instalación de librerías de python en todo el SO
  
-    `sudo easy_install pip
-     sudo pip install virtualenv`
+    ```
+    sudo easy_install pip
+    sudo pip install virtualenv
+    ```
 
  3. Creación de entorno virtual
  
-    `virtualenv /ruta/nombre_entorno
-     source /ruta/nombre_entorno/bin/activate
-     deactivate`
+    ```
+    virtualenv /ruta/nombre_entorno
+    source /ruta/nombre_entorno/bin/activate
+    deactivate
+    ```
 
  4. Instalación de librerías en un entornos (virtualenv)   
  
-    `pip install psycopg2
-     pip install django==1.8
-     pip install ipython`
+    ```
+    pip install psycopg2
+    pip install django==1.8
+    pip install ipython
+    ```
 
  5. Clonar el proyecto
 
-    `git clone https://github.com/Tircnais/GP-Academia-3.1.git`
+    ```git clone https://github.com/Tircnais/GP-Academia-3.1.git```
 
  6. Ejecutar el sql para la base de datos
 ````sql
@@ -316,8 +324,11 @@
 7. Ejecutar El proyecto
  
     
-    `python manage.py inspectdb > models.py
-     python manage.py makemigrations portal
-     python manage.py migrate
-     python manage.py createsuperuser
-     python manage.py runserver`
+    ```
+    python manage.py inspectdb > models.py
+    python manage.py makemigrations portal
+    python manage.py migrate
+    python manage.py createsuperuser
+    python manage.py runserver
+    ```
+
