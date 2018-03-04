@@ -38,7 +38,7 @@ def mapa_view(request):
         latitud = str(latitud).replace(',', '.')
         longitud = lugar.longitud
         longitud = str(longitud).replace(',', '.')
-        print "Coordenadas del MARCADOR:\t", latitud, ", ", longitud
+        # print "Coordenadas del MARCADOR:\t", latitud, ", ", longitud
         provincia = Provincia.objects.filter(id_provincia=fklugar).all()[0]
         fkpais = provincia.pais_id_pais.id_pais
         nombpro = provincia.nombre
@@ -130,11 +130,14 @@ def proconteo(request):
                 nombre = unicode(nombre)
                 cont = AvesLocalizacion.objects.filter(localizacion_id_localizacion=ilugar).count()
                 cont = str(cont)
-                acum = '{' + nombre + ',' + cont + '},'
-                # print "idpais ", pais.nombre, " provincia ", provincia.nombre, " Lugar ", nombre, " Cant AVES", cont
+                # acum = '{' + nombre + ',' + cont + '},'
                 listalocalidades.append((nombre, cont))
             listaprov.append((provincia, listalocalidades))
+            listalocalidades = []
+            # limpia la lista para agregar solo las que son
         listapais.append((pais, listaprov))
+        listaprov = []
+        # limpia la lista para agregar solo las que son
     dicConteo['listapais'] = listapais
 
 
@@ -206,7 +209,7 @@ def clasificacion(request):
 
     datosarbol = []
     datosfamilia = []
-    listordenes = Oorder.objects.all()[:4]
+    listordenes = Oorder.objects.all()[:6]
     for orden in listordenes:
         iorden = orden.id_order
         listafamilias = Familia.objects.filter(order_id_order=iorden)
@@ -214,9 +217,9 @@ def clasificacion(request):
         for familia in listafamilias:
             ifamilia = familia.id_familia
             contAves = Aves.objects.filter(familia_id_familia=ifamilia).count()
-            # if contAves > 500:
             datosfamilia.append((familia, contAves))
         datosarbol.append((orden, datosfamilia, contFamilia))
+        datosfamilia = []
     dicinfo = {
         'datosclasifica': datosclasifica,
         'listaespecie': conteo,
