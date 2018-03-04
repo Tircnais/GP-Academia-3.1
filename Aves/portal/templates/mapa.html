@@ -22,11 +22,11 @@
 				</section>
 			</section>
 			<section class="col-xs-6 verde">
-				<h3 class="col-xs-12 text-center">Detalle de los lugares.</h3>
+				<h3 class="col-xs-12 text-center">Detalle del lugar.</h3>
 				<div class="col-xs-12">
 					<div class="row">
 						<section class="col-xs-12" id="detalle">
-							<p class="text-center">De clic sobre un marcador.</p>
+							<p class="text-center">De clic sobre el marcador de su interés.</p>
 						</section>
 					</div>
 				</div>
@@ -78,17 +78,16 @@
 	            	var popup = new google.maps.InfoWindow();
 	            	var note = '<h3>Coordenas del lugar.</h3><br><p>{{ l.3 }}, {{ l.4 }}';
 	            	var info = document.getElementById("detalle");
-	            	var detalle = "<div class='row center-block'><div class='col-xs-12 gris' style='padding-right: 2em; padding-bottom: 2em;''>";
-	            	var div = "<div class='col-xs-12 blanco'>";
+	            	var detalle = "<div class='row center-block'><div class='col-xs-12 gris' style='padding-right: 2em; padding-bottom: 2em;'>";
+	            	var div = "<div class='col-xs-3'>";
 	            	var fdiv = "</div>";
 	            	var div2 = "<div class='col-xs-12 negro textblanco'>";
 	            	var fdiv2 = "</div>";
-	            	var titulo = div+"<h4 class='text-center'>Ubicación</h4>"+fdiv;
-	            	var lugar=div+"<label>Provincias</label><p>{{l.1.nombre}}</p><br><label>Lugar</label><p>{{l.2.nombre}}</p>"+fdiv;
-	            	var t = div+"<h4 class='text-center'>Coordenas</h4>"+fdiv;
-	            	var coordenadas=div+"<label>Latitud</label><p>{{ l.3 }}</p><br><label>Longitud</label><p>{{ l.4 }}</p><br>"+fdiv;
-	            	var mas=div2+"<label>Ecosistema</label><p>{{ l.2.ecosistema }}</p><br><label>Altitud</label><p>{{ l.2.altitud }}</p><br><label>Topomin</label><p>{{ l.2.toponimo }}</p></div>"+fdiv2;
-	            	detalle += titulo+lugar+t+coordenadas+mas+"</div>";
+	            	var pais = div+"<label class='text-center'>País: </label><p>{{ l.0.nombre }}</p>"+fdiv;
+	            	var provincia = div+"<label class='text-center'>Provincia: </label><p>{{l.1.nombre}}</p>"+fdiv;
+	            	var lugar = div+"<label class='text-center'>Lugar: </label><p>{{l.2.nombre|slice:':30'}}</p>"+fdiv;
+	            	var mas=div2+"<label class='text-center'>Ecosistema</label><p>{{ l.2.ecosistema|default_if_none:'No Disponible' }}</p><br><label class='text-center'>Altitud</label><p>{{ l.2.altitud|default_if_none:'No Disponible' }}</p><br><label class='text-center'>Topomin</label><p>{{ l.2.toponimo|default_if_none:'No Disponible' }}</p></div>"+fdiv2;
+	            	detalle += pais+provincia+lugar+mas+"</div>";
 	            	info.innerHTML = detalle;
 	            	popup.setContent(note);
 	            	popup.open(map, this);
