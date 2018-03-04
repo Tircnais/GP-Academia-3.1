@@ -38,14 +38,12 @@ def mapa_view(request):
         latitud = str(latitud).replace(',', '.')
         longitud = lugar.longitud
         longitud = str(longitud).replace(',', '.')
-        print "Coordenada:\t", latitud, " ", longitud
-        listaprovincias = Provincia.objects.filter(id_provincia=fklugar).all()
-        for provincia in listaprovincias:
-            fkpais = provincia.pais_id_pais.id_pais
-            nombpro = provincia.nombre
-            listapaises = Pais.objects.filter(id_pais=fkpais).all()
-            for pais in listapaises:
-                lugares.append((pais, provincia, lugar, latitud, longitud, conteo))
+        print "Coordenadas del MARCADOR:\t", latitud, ", ", longitud
+        provincia = Provincia.objects.filter(id_provincia=fklugar).all()[0]
+        fkpais = provincia.pais_id_pais.id_pais
+        nombpro = provincia.nombre
+        pais = Pais.objects.filter(id_pais=fkpais).all()[0]
+        lugares.append((pais, provincia, lugar, latitud, longitud, conteo))
     #----------------------Termino yo--------------_#
 
     provincias = Provincia.objects.all()

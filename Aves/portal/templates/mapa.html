@@ -61,12 +61,11 @@
 			var myLatlng = new google.maps.LatLng(-2.524406, -78.929772);
 			var mapOptions = {
 				zoom: 6,
-				
+				mapTypeId: google.maps.MapTypeId.hybrid,
 			    center: myLatlng
 			}
 			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 			{% for l in lugares %}
-				console.log("{{ -----");
 				var marcador = new google.maps.LatLng({{ l.3 }}, {{ l.4 }});
 				console.log("{{ l.2.nombre }} -- {{ l.3 }} , {{ l.4 }}");
 				var marker = new google.maps.Marker({
@@ -91,33 +90,6 @@
 	            	var mas=div2+"<label>Ecosistema</label><p>{{ l.2.ecosistema }}</p><br><label>Altitud</label><p>{{ l.2.altitud }}</p><br><label>Topomin</label><p>{{ l.2.toponimo }}</p></div>"+fdiv2;
 	            	detalle += titulo+lugar+t+coordenadas+mas+"</div>";
 	            	info.innerHTML = detalle;
-
-	            	popup.setContent(note);
-	            	popup.open(map, this);
-	      		})
-	      	{% endfor %}
-	    }
-	    google.maps.event.addDomListener(window, 'load', initialize);
-
-	    function initialize() {
-			var myLatlng = new google.maps.LatLng(-2.524406, -78.929772);
-			var mapOptions = {
-				zoom: 6,
-				mapTypeId: google.maps.MapTypeId.hybrid,
-			    center: myLatlng
-			}
-			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-			{% for lugares in places %}
-				var marcador = new google.maps.LatLng({{lugares.latitud}}, {{lugares.longitud}});
-				var marker = new google.maps.Marker({
-					position: marcador,
-		      		map: map,
-			    	animation: google.maps.Animation.DROP,
-			    	title: '{{lugares.nombre}}'
-			    });
-	      		google.maps.event.addListener(marker, 'click', function(){
-	            	var popup = new google.maps.InfoWindow();
-	            	var note = '{{lugares.nombre}}<br>{{lugares.descripcionn}}'+'<h1>{{lugares.latitud}}</h1>';
 	            	popup.setContent(note);
 	            	popup.open(map, this);
 	      		})
