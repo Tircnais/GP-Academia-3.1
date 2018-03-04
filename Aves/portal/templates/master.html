@@ -30,8 +30,9 @@
 
 	<link rel="stylesheet" href="{% static 'font/font.css' %}">
 	<!-- ESTILOS de la pag WEB -->
-	<link rel="stylesheet" href="{% static 'css/ihover.css' %}"
 	<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+	<!-- EFEcTOS a GALERIA -->
+	<link rel="stylesheet" href="{% static 'css/ihover.css' %}">
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -71,7 +72,7 @@
 			        	<a href="{% url 'especies' %}"><span class="icon-stats-bars2"></span>CLASIFICACION</a>
 			        </li>
 			        <li>
-			        	<a href="https://github.com/programacion-taw-utpl-001/gp31-final-grupo003" GIT"><span class="icon-github"></span>PROYECTO-GIT</a>
+			        	<a href="https://github.com/Tircnais/GP-Academia-3.1"><span class="icon-github"></span>PROYECTO-GIT</a>
 			        </li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Mas<b class="caret"></b></a>
@@ -214,7 +215,7 @@
 	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-	<script src="{% static 'js/jquery.modal.min.js' %}" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.modal.min.js' %}" charset="utf-8"></script>
 	<script type="text/javascript" src="{% static 'assets/js/headroom.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'assets/js/jQuery.headroom.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'assets/js/template.js' %}"></script>
@@ -222,16 +223,12 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-	<script type="text/javascript" src="{% static 'js/acciones.js' %}"></script>
-	
+	<script type="text/javascript" src="{% static 'js/acciones.js' %}"></script>	
 	<script type="text/javascript" src="{% static 'css/bootstrap-3.3.7/js/jquery.min.js' %}"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-	
-	<script src="{% static 'js/main.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
 	{% block script %}
 		
 	{% endblock %}

@@ -16,17 +16,17 @@
 			<div class="col-xs-4">
 				<div id="cuadropaises">
 					<p>Algo va mal... revisar la conexión de internet.</p>
-					{% for pais in listapais %}
-						<p>'{{ pais.0.nombre }}': {
+        			{% for pais in listapais %}
+						'{{ pais.0.nombre }}': {
 							{% for provincia in pais.1 %}
-								<label for="">'{{provincia.0.nombre}}': {
+								'{{provincia.0.nombre}}': {
 									{% for lugares in provincia.1 %}
-										'{{ lugares.0 }}': '{{ lugares.1 }}',<br>
+										'{{ lugares.0 }}': '{{ lugares.1 }}',
 									{% endfor %}
-								},</label>
+								},
 							{% endfor %}
-				        },</p>
-		        	{% endfor %}
+				        },
+				    {% endfor %}
 				</div>
 			</div>
 			<div class="col-xs-4">
@@ -302,6 +302,7 @@
 			        text: 'Visualización detallada.'
 			    }
 			});
+
 		});
 	</script>
 {% endblock %}

@@ -8,15 +8,15 @@
 {% block contenido %}
 	<div class="col-xs-12">
 		<div class="row">
-			<section class="col-xs-6 blanco">
+			<section class="col-xs-6 verde2">
 				<h3 class="col-xs-12 text-center">Lugares de estudio</h3>
 				<section id="map-canvas">
 					{% for l in lugares %}
 						<label for="">PAÍS</label><p>{{ l.0.nombre }}</p>
 						<label for="">Provincia</label><p>{{ l.1.nombre }}</p>
 						<label for="">Lugar</label><p>{{ l.2.nombre }}</p>
-						<label for="">Latitud</label><p>{{ l.2.latitud }}</p>
-						<label for="">Longitud</label><p>{{ l.2.longitud }}</p>
+						<label for="">Latitud</label><p>{{ l.3 }}</p>
+						<label for="">Longitud</label><p>{{ l.4 }}</p>
 						<label for="">Cantidad</label><p>{{ l.5 }}</p>
 					{% endfor %}
 				</section>
@@ -56,20 +56,17 @@
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-
 	<script ype="text/Javascript">
 		function initialize() {
 			var myLatlng = new google.maps.LatLng(-2.524406, -78.929772);
 			var mapOptions = {
-				zoom: 7,
-				mapTypeId: google.maps.MapTypeId.hybrid,
+				zoom: 6,
+				
 			    center: myLatlng
 			}
 			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-			
 			{% for l in lugares %}
+				console.log("{{ -----");
 				var marcador = new google.maps.LatLng({{ l.3 }}, {{ l.4 }});
 				console.log("{{ l.2.nombre }} -- {{ l.3 }} , {{ l.4 }}");
 				var marker = new google.maps.Marker({
@@ -90,7 +87,7 @@
 	            	var titulo = div+"<h4 class='text-center'>Ubicación</h4>"+fdiv;
 	            	var lugar=div+"<label>Provincias</label><p>{{l.1.nombre}}</p><br><label>Lugar</label><p>{{l.2.nombre}}</p>"+fdiv;
 	            	var t = div+"<h4 class='text-center'>Coordenas</h4>"+fdiv;
-	            	var coordenadas=div+"<label>Latitud</label><p>{{ l.2.latitud }}</p><br><label>Longitud</label><p>{{ l.2.longitud }}</p><br>"+fdiv;
+	            	var coordenadas=div+"<label>Latitud</label><p>{{ l.3 }}</p><br><label>Longitud</label><p>{{ l.4 }}</p><br>"+fdiv;
 	            	var mas=div2+"<label>Ecosistema</label><p>{{ l.2.ecosistema }}</p><br><label>Altitud</label><p>{{ l.2.altitud }}</p><br><label>Topomin</label><p>{{ l.2.toponimo }}</p></div>"+fdiv2;
 	            	detalle += titulo+lugar+t+coordenadas+mas+"</div>";
 	            	info.innerHTML = detalle;
@@ -102,6 +99,31 @@
 	    }
 	    google.maps.event.addDomListener(window, 'load', initialize);
 
+	    function initialize() {
+			var myLatlng = new google.maps.LatLng(-2.524406, -78.929772);
+			var mapOptions = {
+				zoom: 6,
+				mapTypeId: google.maps.MapTypeId.hybrid,
+			    center: myLatlng
+			}
+			var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			{% for lugares in places %}
+				var marcador = new google.maps.LatLng({{lugares.latitud}}, {{lugares.longitud}});
+				var marker = new google.maps.Marker({
+					position: marcador,
+		      		map: map,
+			    	animation: google.maps.Animation.DROP,
+			    	title: '{{lugares.nombre}}'
+			    });
+	      		google.maps.event.addListener(marker, 'click', function(){
+	            	var popup = new google.maps.InfoWindow();
+	            	var note = '{{lugares.nombre}}<br>{{lugares.descripcionn}}'+'<h1>{{lugares.latitud}}</h1>';
+	            	popup.setContent(note);
+	            	popup.open(map, this);
+	      		})
+	      	{% endfor %}
+	    }
+	    google.maps.event.addDomListener(window, 'load', initialize);
 
 	    //datosblugares.append((colores, idlugar, nombLugar, conteoLugar, idpro, nombpro, conteoProv, idpais, nombpais, conteoPais))
 	    Highcharts.chart('estadistica', {

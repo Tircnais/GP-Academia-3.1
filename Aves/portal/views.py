@@ -25,29 +25,25 @@ import random
 def mapa_view(request):
     datosblugares = []
     lugares = []
-    listalugares = Localizacion.objects.distinct().all()
-
     #----------------------Empiezo yo--------------_#
     inicio = 20
     listalugares = Localizacion.objects.distinct().all()[:inicio]
     for lugar in listalugares:
         fklugar = lugar.provincia_id_provincia.id_provincia
         ilugar = lugar.id_localizacion
-        # lista = AvesLocalizacion.objects.filter(localizacion_id_localizacion=ilugar)
         conteo = AvesLocalizacion.objects.filter(localizacion_id_localizacion=ilugar).count()
         # print "->\t", inicio
         inicio += 1
-        # print "FK lugar\t", fklugar
         latitud = lugar.latitud
         latitud = str(latitud).replace(',', '.')
         longitud = lugar.longitud
         longitud = str(longitud).replace(',', '.')
         print "Coordenada:\t", latitud, " ", longitud
-        listaprovincias = Provincia.objects.filter(id_provincia=fklugar)
+        listaprovincias = Provincia.objects.filter(id_provincia=fklugar).all()
         for provincia in listaprovincias:
             fkpais = provincia.pais_id_pais.id_pais
             nombpro = provincia.nombre
-            listapaises = Pais.objects.filter(id_pais=fkpais)
+            listapaises = Pais.objects.filter(id_pais=fkpais).all()
             for pais in listapaises:
                 lugares.append((pais, provincia, lugar, latitud, longitud, conteo))
     #----------------------Termino yo--------------_#
