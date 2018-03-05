@@ -191,9 +191,9 @@
 			        keys: ['from', 'to', 'weight'],
 			        data: [
 			        	// desde aki
-			        	{% for especie in datosarbol %}
-			        		{% for familia in especie.1 %}
-		        				['{{ especie.0.nombre }}', '{{ familia.0.nombre }}', {{ especie.2 }} ],
+			        	{% for orden in datosarbol %}
+			        		{% for familia in orden.1 %}
+		        				['{{ orden.0.nombre }}', '{{ familia.0.nombre }}', {{ orden.2 }} ],
 		        				// orden, listafamilias, contorden
 			        		{% endfor %}
 			        	{% endfor %}
