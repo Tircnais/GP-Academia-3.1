@@ -220,7 +220,8 @@ def clasificacion(request):
         for familia in listafamilias:
             ifamilia = familia.id_familia
             contAves = Aves.objects.filter(familia_id_familia=ifamilia).count()
-            datosfamilia.append((familia, contAves))
+            ave = Aves.objects.filter(familia_id_familia=ifamilia).all()[0]
+            datosfamilia.append((familia, ave, contAves))
         datosarbol.append((orden, datosfamilia, contFamilia))
         datosfamilia = []
     dicinfo = {

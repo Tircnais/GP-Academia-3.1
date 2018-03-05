@@ -194,6 +194,7 @@
 			        	{% for orden in datosarbol %}
 			        		{% for familia in orden.1 %}
 		        				['{{ orden.0.nombre }}', '{{ familia.0.nombre }}', {{ orden.2 }} ],
+		        				['{{ familia.0.nombre }}', '{{ familia.1.nombre }}', {{ familia.2 }} ],
 		        				// orden, listafamilias, contorden
 			        		{% endfor %}
 			        	{% endfor %}
