@@ -212,16 +212,20 @@ def clasificacion(request):
 
     datosarbol = []
     datosfamilia = []
-    listordenes = Oorder.objects.all()[:6]
+    datosaves = []
+    listordenes = Oorder.objects.all()[:4]
     for orden in listordenes:
         iorden = orden.id_order
-        listafamilias = Familia.objects.filter(order_id_order=iorden)
-        contFamilia = Familia.objects.filter(order_id_order=iorden).count()
+        listafamilias = Familia.objects.filter(order_id_order=iorden).all()[:2]
+        contFamilia = Aves.objects.filter(familia_id_familia__order_id_order__id_order=iorden).count()
         for familia in listafamilias:
             ifamilia = familia.id_familia
-            contAves = Aves.objects.filter(familia_id_familia=ifamilia).count()
-            ave = Aves.objects.filter(familia_id_familia=ifamilia).all()[0]
-            datosfamilia.append((familia, ave, contAves))
+            contAves = Aves.objects.filter(familia_id_familia__id_familia=ifamilia).count()
+            aves = Aves.objects.filter(familia_id_familia=ifamilia).all()[:2]
+            for ave in aves:
+                datosaves.append(ave)
+            datosfamilia.append((familia, datosaves, contAves))
+            datosaves = []
         datosarbol.append((orden, datosfamilia, contFamilia))
         datosfamilia = []
     dicinfo = {
