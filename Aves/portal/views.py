@@ -130,6 +130,9 @@ def proconteo(request):
                 nombre = unicode(nombre)
                 cont = AvesLocalizacion.objects.filter(localizacion_id_localizacion=ilugar).count()
                 cont = str(cont)
+                nombre = nombre[:10]
+                nombre = nombre.replace(".", " ")
+                nombre = nombre.replace(",", " ")
                 # acum = '{' + nombre + ',' + cont + '},'
                 listalocalidades.append((nombre, cont))
             listaprov.append((provincia, listalocalidades))
