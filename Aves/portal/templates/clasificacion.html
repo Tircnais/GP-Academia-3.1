@@ -193,9 +193,9 @@
 			        	// desde aki
 			        	{% for orden in datosarbol %}
 			        		{% for familia in orden.1 %}
-		        				['{{ familia.0.nombre }}', '{{ orden.0.nombre }}', {{ orden.2 }} ],
+		        				['{{ orden.0.nombre }}', '{{ familia.0.nombre }}', {{ familia.2 }} ],
 		        				{% for ave in familia.1 %}
-		        					['{{ ave.nombre }}', '{{ familia.0.nombre }}', {{ familia.2 }} ],
+		        					['{{ familia.0.nombre }}', '{{ ave.0.nombre }}', {{ ave.1 }} ],
 		        				{% endfor %}
 		        				// orden, listafamilias, contorden
 			        		{% endfor %}
